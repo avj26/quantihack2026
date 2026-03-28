@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, useMapEvents, useMap } from 'react-leaflet'
 import L from 'leaflet'
+import RouteLayer from './RouteLayer'
 
 // leaflet.heat is a legacy UMD plugin that patches a global L.
 // We must expose our L as window.L BEFORE the static import below runs its factory.
@@ -45,16 +46,20 @@ function HeatmapLayer({ points }) {
     }
     layerRef.current = L.heatLayer(points, {
       radius: 28,
-      blur: 20,
-      maxZoom: 17,
-      max: 1.0,
+      blur: 18,
+      maxZoom: 18,
+      // max > 1 so background grid-point accumulation never saturates —
+      // only true hotspot clusters (many high-weight points overlapping) hit peak colour
+      max: 3.0,
+      minOpacity: 0.0,
       gradient: {
-        0.0: '#1e3a5f',
-        0.2: '#1d4ed8',
-        0.4: '#7c3aed',
-        0.6: '#dc2626',
-        0.8: '#ea580c',
-        1.0: '#fbbf24',
+        0.00: 'rgba(0,0,0,0)',            // transparent — safe zones invisible
+        0.25: 'rgba(0,0,0,0)',            // extended transparent tail
+        0.35: 'rgba(37,99,235,0.55)',     // blue edge of risk
+        0.52: 'rgba(124,58,237,0.82)',    // purple — moderate risk
+        0.68: 'rgba(220,38,38,0.92)',     // red — high risk
+        0.84: 'rgba(249,115,22,1.0)',     // orange
+        1.00: 'rgba(251,191,36,1.0)',     // amber peak — hotspot centre
       },
     }).addTo(map)
 
@@ -110,7 +115,7 @@ function FlyTo({ target }) {
   return null
 }
 
-export default function MapView({ heatmapPoints, markerPos, riskLevel, onMapClick, flyTarget }) {
+export default function MapView({ heatmapPoints, markerPos, riskLevel, onMapClick, flyTarget, routeData }) {
   return (
     <MapContainer
       center={[51.505, -0.09]}
@@ -124,7 +129,8 @@ export default function MapView({ heatmapPoints, markerPos, riskLevel, onMapClic
         maxZoom={19}
       />
       <HeatmapLayer points={heatmapPoints} />
-      <MarkerLayer position={markerPos} riskLevel={riskLevel} />
+      {!routeData && <MarkerLayer position={markerPos} riskLevel={riskLevel} />}
+      <RouteLayer routeData={routeData} />
       <ClickHandler onMapClick={onMapClick} />
       <FlyTo target={flyTarget} />
     </MapContainer>

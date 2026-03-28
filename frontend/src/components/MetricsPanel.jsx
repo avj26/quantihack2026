@@ -1,8 +1,72 @@
 import React, { useState } from 'react'
-import { Lightbulb, Users, AlertTriangle, Clock, Camera, MapPin, X, ShieldCheck, Radio } from 'lucide-react'
+import { Lightbulb, Users, AlertTriangle, Clock, Camera, MapPin, X, ShieldCheck, Radio, Cloud, Wind, Thermometer } from 'lucide-react'
 import SafetyGauge from './SafetyGauge'
 import MetricCard from './MetricCard'
 import SocialFeed from './SocialFeed'
+
+function WeatherRow({ weather }) {
+  if (!weather) return null
+  const modColor = weather.modifier < -0.10 ? '#f97316' : weather.modifier < -0.04 ? '#f59e0b' : '#10b981'
+  return (
+    <div
+      className="flex items-center gap-3 px-3 py-2.5 rounded-xl"
+      style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}
+    >
+      <Cloud size={13} className="text-blue-300 flex-shrink-0" />
+      <div className="flex-1 min-w-0">
+        <div className="text-xs font-semibold text-white leading-tight truncate">{weather.condition}</div>
+        <div className="flex items-center gap-2 mt-0.5 text-xs text-gray-500">
+          <Thermometer size={10} />
+          <span>{weather.temp_c != null ? `${Math.round(weather.temp_c)}°C` : '—'}</span>
+          <Wind size={10} />
+          <span>{weather.wind_kmh != null ? `${Math.round(weather.wind_kmh)} km/h` : '—'}</span>
+        </div>
+      </div>
+      <div className="text-xs font-bold" style={{ color: modColor }}>
+        {weather.modifier >= 0 ? '+' : ''}{Math.round(weather.modifier * 100)}
+      </div>
+    </div>
+  )
+}
+
+function ScoreBreakdown({ breakdown }) {
+  if (!breakdown) return null
+  const rows = [
+    { label: 'Base score', value: breakdown.base, color: '#60a5fa' },
+    { label: 'Crime data', value: breakdown.crime, color: breakdown.crime < 0 ? '#f97316' : '#10b981' },
+    { label: 'Weather', value: breakdown.weather, color: breakdown.weather < 0 ? '#f59e0b' : '#10b981' },
+    { label: 'Road condition', value: breakdown.road, color: breakdown.road < 0 ? '#f97316' : '#10b981' },
+  ]
+  return (
+    <div className="flex flex-col gap-1.5">
+      {rows.map(r => (
+        <div key={r.label} className="flex items-center justify-between text-xs">
+          <span className="text-gray-500">{r.label}</span>
+          <span className="font-bold" style={{ color: r.color }}>
+            {r.label === 'Base score' ? r.value : (r.value >= 0 ? `+${r.value}` : r.value)}
+          </span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function DataSources({ sources }) {
+  if (!sources || sources.length === 0) return null
+  return (
+    <div className="flex items-center gap-1.5 flex-wrap">
+      {sources.map(s => (
+        <span
+          key={s}
+          className="text-xs px-2 py-0.5 rounded-full"
+          style={{ background: 'rgba(96,165,250,0.1)', color: '#60a5fa', border: '1px solid rgba(96,165,250,0.2)' }}
+        >
+          {s}
+        </span>
+      ))}
+    </div>
+  )
+}
 
 const TABS = [
   { id: 'report', label: 'Safety Report', Icon: ShieldCheck },
@@ -23,7 +87,7 @@ export default function MetricsPanel({
 
   if (!data) return null
 
-  const { risk_level, summary, metrics } = data
+  const { risk_level, summary, metrics, weather, road_flags, score_breakdown, data_sources } = data
   const displayScore = adjustedScore ?? data.score
   const userPostCount = socialData?.user_post_count ?? 0
 
@@ -114,6 +178,35 @@ export default function MetricsPanel({
 
               <div className="border-t border-white/5" />
 
+              {/* Weather */}
+              {weather && (
+                <>
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">Current Weather</div>
+                    <WeatherRow weather={weather} />
+                  </div>
+                  <div className="border-t border-white/5" />
+                </>
+              )}
+
+              {/* Road flags */}
+              {road_flags && road_flags.length > 0 && (
+                <>
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">Road Conditions</div>
+                    <div className="flex flex-col gap-1.5">
+                      {road_flags.map(f => (
+                        <div key={f} className="flex items-center gap-2 text-xs text-orange-300">
+                          <AlertTriangle size={11} className="flex-shrink-0" />
+                          <span>{f}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="border-t border-white/5" />
+                </>
+              )}
+
               {/* Metrics */}
               <div>
                 <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-3">Area Metrics</div>
@@ -125,6 +218,28 @@ export default function MetricsPanel({
                   <MetricCard icon={Camera} label="CCTV Coverage" value={metrics.cctv_coverage} />
                 </div>
               </div>
+
+              {/* Score breakdown */}
+              {score_breakdown && (
+                <>
+                  <div className="border-t border-white/5" />
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">Score Breakdown</div>
+                    <ScoreBreakdown breakdown={score_breakdown} />
+                  </div>
+                </>
+              )}
+
+              {/* Data sources */}
+              {data_sources && data_sources.length > 0 && (
+                <>
+                  <div className="border-t border-white/5" />
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">Live Data Sources</div>
+                    <DataSources sources={data_sources} />
+                  </div>
+                </>
+              )}
             </div>
           )}
 

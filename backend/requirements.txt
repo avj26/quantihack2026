@@ -1,3 +1,8 @@
 fastapi
 uvicorn[standard]
 sqlalchemy
+httpx
+
+# ML classifiers (install separately if not needed)
+torch
+transformers

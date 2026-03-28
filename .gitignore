@@ -1,0 +1,13 @@
+# Model artifacts
+**/models/**
+
+# Common ML model file types
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.keras
+*.joblib
+*.pkl

@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import { Navigation2, Info } from 'lucide-react'
+import { Navigation2, Info, MapPin, Route } from 'lucide-react'
 import MapView from './components/MapView'
 import MetricsPanel from './components/MetricsPanel'
 import SearchBar from './components/SearchBar'
 import TimeSlider from './components/TimeSlider'
+import RoutingPanel from './components/RoutingPanel'
 import axios from 'axios'
 
 export default function App() {
@@ -16,6 +17,10 @@ export default function App() {
   const [socialLoading, setSocialLoading] = useState(false)
   const [hour, setHour] = useState(new Date().getHours())
   const [flyTarget, setFlyTarget] = useState(null)
+
+  // Routing mode
+  const [appMode, setAppMode] = useState('explore') // 'explore' | 'route'
+  const [routeData, setRouteData] = useState(null)
 
   // Fetch heatmap on mount
   useEffect(() => {
@@ -61,10 +66,24 @@ export default function App() {
   }
 
   const handleMapClick = async ({ lat, lng }) => {
+    if (appMode === 'route') return  // map clicks disabled in routing mode
     setSelectedPos([lat, lng])
     const addr = await reverseGeocode(lat, lng)
     setAddress(addr)
     fetchSafety(lat, lng)
+  }
+
+  const handleSwitchMode = (mode) => {
+    setAppMode(mode)
+    if (mode === 'route') {
+      // Clear explore state when switching to route mode
+      setSelectedPos(null)
+      setSafetyData(null)
+      setSocialData(null)
+    } else {
+      // Clear route when switching back to explore
+      setRouteData(null)
+    }
   }
 
   const handleLocationSelect = async ({ lat, lng, address: addr }) => {
@@ -126,6 +145,7 @@ export default function App() {
         riskLevel={riskLevel}
         onMapClick={handleMapClick}
         flyTarget={flyTarget}
+        routeData={routeData}
       />
 
       {/* Logo / Top bar */}
@@ -142,51 +162,110 @@ export default function App() {
 
       {/* Left panel */}
       <div
-        className="absolute top-4 left-4 z-[1000] pointer-events-auto"
+        className="absolute top-4 left-4 bottom-4 z-[1000] pointer-events-auto flex flex-col gap-3"
         style={{ width: '300px' }}
       >
         <div
-          className="rounded-2xl p-4 flex flex-col gap-4"
+          className="rounded-2xl flex flex-col overflow-hidden flex-1"
           style={{ background: 'rgba(10,14,26,0.92)', border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(20px)' }}
         >
-          <SearchBar onLocationSelect={handleLocationSelect} />
-          <div className="border-t border-white/5 pt-3">
-            <TimeSlider hour={hour} onChange={handleHourChange} />
+          {/* Mode toggle */}
+          <div className="p-3 pb-0 flex-shrink-0">
+            <div className="flex p-1 gap-1 rounded-xl" style={{ background: 'rgba(255,255,255,0.04)' }}>
+              <button
+                onClick={() => handleSwitchMode('explore')}
+                className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold transition-all"
+                style={{
+                  background: appMode === 'explore' ? 'rgba(255,255,255,0.10)' : 'transparent',
+                  color: appMode === 'explore' ? '#fff' : '#6b7280',
+                }}
+              >
+                <MapPin size={12} />
+                <span>Explore</span>
+              </button>
+              <button
+                onClick={() => handleSwitchMode('route')}
+                className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold transition-all"
+                style={{
+                  background: appMode === 'route' ? 'rgba(255,255,255,0.10)' : 'transparent',
+                  color: appMode === 'route' ? '#fff' : '#6b7280',
+                }}
+              >
+                <Route size={12} />
+                <span>Route</span>
+              </button>
+            </div>
           </div>
 
-          {/* Hint */}
-          {!selectedPos && (
-            <div className="flex items-start gap-2 p-3 rounded-xl bg-blue-950/30 border border-blue-900/30">
-              <Info size={13} className="text-blue-400 mt-0.5 flex-shrink-0" />
-              <p className="text-xs text-gray-400 leading-relaxed">
-                <span className="text-gray-300 font-medium">Click anywhere on the map</span> or search a street to get a real-time safety report.
-              </p>
-            </div>
-          )}
-
-          {/* Loading state */}
-          {loading && (
-            <div className="flex items-center gap-2 p-3 rounded-xl bg-white/5">
-              <div className="w-4 h-4 border-2 border-blue-400/30 border-t-blue-400 rounded-full animate-spin" />
-              <span className="text-xs text-gray-400">Analysing area...</span>
-            </div>
-          )}
+          {/* Panel content — scrollable */}
+          <div className="flex-1 overflow-y-auto metrics-scroll p-4 flex flex-col gap-4">
+            {appMode === 'explore' ? (
+              <>
+                <SearchBar onLocationSelect={handleLocationSelect} />
+                <div className="border-t border-white/5 pt-1">
+                  <TimeSlider hour={hour} onChange={handleHourChange} />
+                </div>
+                {!selectedPos && (
+                  <div className="flex items-start gap-2 p-3 rounded-xl bg-blue-950/30 border border-blue-900/30">
+                    <Info size={13} className="text-blue-400 mt-0.5 flex-shrink-0" />
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      <span className="text-gray-300 font-medium">Click the map</span> or search to get a safety report.
+                    </p>
+                  </div>
+                )}
+                {loading && (
+                  <div className="flex items-center gap-2 p-3 rounded-xl bg-white/5">
+                    <div className="w-4 h-4 border-2 border-blue-400/30 border-t-blue-400 rounded-full animate-spin" />
+                    <span className="text-xs text-gray-400">Analysing area...</span>
+                  </div>
+                )}
+              </>
+            ) : (
+              <>
+                <TimeSlider hour={hour} onChange={handleHourChange} />
+                <div className="border-t border-white/5" />
+                <RoutingPanel
+                  hour={hour}
+                  onRouteFound={setRouteData}
+                  onClear={() => setRouteData(null)}
+                />
+              </>
+            )}
+          </div>
         </div>
 
-        {/* Legend */}
-        <div
-          className="mt-3 rounded-xl px-4 py-3"
-          style={{ background: 'rgba(10,14,26,0.85)', border: '1px solid rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)' }}
-        >
-          <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">Heatmap Legend</div>
-          <div className="flex items-center gap-1.5">
+        {/* Legend — only in explore mode */}
+        {appMode === 'explore' && (
+          <div
+            className="rounded-xl px-4 py-3 flex-shrink-0"
+            style={{ background: 'rgba(10,14,26,0.85)', border: '1px solid rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)' }}
+          >
+            <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">Heatmap Legend</div>
             <div className="flex-1 h-2 rounded-full" style={{ background: 'linear-gradient(to right, #1d4ed8, #7c3aed, #dc2626, #ea580c, #fbbf24)' }} />
+            <div className="flex justify-between text-xs text-gray-600 mt-1">
+              <span>Safer</span>
+              <span>Higher Risk</span>
+            </div>
           </div>
-          <div className="flex justify-between text-xs text-gray-600 mt-1">
-            <span>Safer</span>
-            <span>Higher Risk</span>
+        )}
+
+        {/* Route legend */}
+        {appMode === 'route' && routeData && (
+          <div
+            className="rounded-xl px-4 py-3 flex-shrink-0"
+            style={{ background: 'rgba(10,14,26,0.85)', border: '1px solid rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)' }}
+          >
+            <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">Route Safety</div>
+            <div className="flex items-center gap-2">
+              {[['#10b981','Safe'],['#f59e0b','Caution'],['#f97316','Risky'],['#ef4444','Danger']].map(([c, l]) => (
+                <div key={l} className="flex items-center gap-1">
+                  <div className="w-3 h-3 rounded-sm" style={{ background: c }} />
+                  <span className="text-xs text-gray-500">{l}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Right metrics panel */}

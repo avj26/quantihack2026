@@ -1,0 +1,4247 @@
+[
+  {
+    "text": "Saw a pickpocket working the area, be careful with your pockets \u2014 tonight",
+    "category": "crime",
+    "severity": 0.702
+  },
+  {
+    "text": "Burglary in progress, police called and on their way \u2014 pretty concerning",
+    "category": "crime",
+    "severity": 0.762
+  },
+  {
+    "text": "Several street lights broken making the path very dark",
+    "category": "road_hazard",
+    "severity": 0.416
+  },
+  {
+    "text": "Burglary in progress, police called and on their way \u2014 this morning",
+    "category": "crime",
+    "severity": 0.749
+  },
+  {
+    "text": "Road surface is really broken and dangerous here #LondonRoads",
+    "category": "road_hazard",
+    "severity": 0.392
+  },
+  {
+    "text": "Street lights are all out on this road, completely unlit",
+    "category": "road_hazard",
+    "severity": 0.377
+  },
+  {
+    "text": "This road is always busy and well lit, never had any issues here #LondonLife",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Last night: wallet lifted from my pocket while i was distracted",
+    "category": "crime",
+    "severity": 0.75
+  },
+  {
+    "text": "On Soho road \u2014 some broken street lights making parts of this road darker than usual",
+    "category": "road_hazard",
+    "severity": 0.297
+  },
+  {
+    "text": "A bit quieter than usual but nothing unusual or alarming",
+    "category": "neutral",
+    "severity": 0.161
+  },
+  {
+    "text": "Windy evening making the walk less pleasant but manageable, happened right now",
+    "category": "weather",
+    "severity": 0.114
+  },
+  {
+    "text": "Last night: graffiti group of men marking territory, area feels tense tonight",
+    "category": "antisocial",
+    "severity": 0.375
+  },
+  {
+    "text": "In Bethnal Green \u2014 someone was very threatening in their behaviour near here",
+    "category": "antisocial",
+    "severity": 0.558
+  },
+  {
+    "text": "A woman was violently assaulted near the bus stop just now \u2014 really serious",
+    "category": "crime",
+    "severity": 0.918
+  },
+  {
+    "text": "Busy road with loads of families and couples out, very safe feeling",
+    "category": "safe",
+    "severity": 0.067
+  },
+  {
+    "text": "Car windows smashed and belongings stolen on this street \u2014 pretty concerning",
+    "category": "crime",
+    "severity": 0.603
+  },
+  {
+    "text": "Wallet lifted from my pocket while I was distracted",
+    "category": "crime",
+    "severity": 0.664
+  },
+  {
+    "text": "Very misty tonight, reduced visibility but still walkable #StaySafe",
+    "category": "weather",
+    "severity": 0.249
+  },
+  {
+    "text": "Normal level of activity for this time of night, no concerns #LondonLife",
+    "category": "neutral",
+    "severity": 0.068
+  },
+  {
+    "text": "Saw some people sitting outside but nothing threatening \u2014 no worries",
+    "category": "neutral",
+    "severity": 0.16
+  },
+  {
+    "text": "Shooting reported nearby, police have cordoned the area \u2014 really serious",
+    "category": "crime",
+    "severity": 0.909
+  },
+  {
+    "text": "An hour ago: armed robbery at the corner shop, they had a knife",
+    "category": "crime",
+    "severity": 0.932
+  },
+  {
+    "text": "Area seems calm, just the usual late night quietness \u2014 all good",
+    "category": "neutral",
+    "severity": 0.124
+  },
+  {
+    "text": "Heavy rain and poor drainage flooding the underpass #LondonWeather",
+    "category": "weather",
+    "severity": 0.385
+  },
+  {
+    "text": "Last night: busy road with loads of families and couples out, very fine feeling",
+    "category": "safe",
+    "severity": 0.125
+  },
+  {
+    "text": "Around Bethnal Green \u2014 bike theft happened in broad daylight right here, happened tonight",
+    "category": "crime",
+    "severity": 0.631
+  },
+  {
+    "text": "This afternoon: nothing to report here, normal evening on this road",
+    "category": "neutral",
+    "severity": 0.115
+  },
+  {
+    "text": "Gravel path in poor condition makes cycling difficult and risky \u2014 feels fine",
+    "category": "road_hazard",
+    "severity": 0.272
+  },
+  {
+    "text": "This whole stretch has no street lighting at all, pitch black #WatchYourStep",
+    "category": "road_hazard",
+    "severity": 0.481
+  },
+  {
+    "text": "Someone just threatened me with a bottle, get out of here #CrimeAlert",
+    "category": "crime",
+    "severity": 0.878
+  },
+  {
+    "text": "At midnight: someone was very aggressive in their behaviour near here",
+    "category": "antisocial",
+    "severity": 0.554
+  },
+  {
+    "text": "Council has improved the lighting here recently, much safer now \u2014 all good",
+    "category": "safe",
+    "severity": 0.071
+  },
+  {
+    "text": "Police stationed near here tonight, area is very well covered \u2014 no worries",
+    "category": "safe",
+    "severity": 0.024
+  },
+  {
+    "text": "Just now: nothing happening here that i noticed, seemed pretty ordinary",
+    "category": "neutral",
+    "severity": 0.158
+  },
+  {
+    "text": "Bit dark around here but nothing sketchy going on",
+    "category": "neutral",
+    "severity": 0.284
+  },
+  {
+    "text": "Repeated verbal abuse from someone outside the station here",
+    "category": "antisocial",
+    "severity": 0.485
+  },
+  {
+    "text": "Just walked this route alone and felt completely fine, recommend it \u2014 feels fine",
+    "category": "safe",
+    "severity": 0.107
+  },
+  {
+    "text": "Pavement completely broken and dangerous to walk on at night, happened a few minutes ago (near Canary Wharf)",
+    "category": "road_hazard",
+    "severity": 0.513
+  },
+  {
+    "text": "By New Cross station \u2014 saw someone being followed and harassed down this road",
+    "category": "antisocial",
+    "severity": 0.627
+  },
+  {
+    "text": "Walked past without any issues, nothing out of the ordinary",
+    "category": "neutral",
+    "severity": 0.087
+  },
+  {
+    "text": "Well-lit road with constant foot traffic, never felt unsafe here (near Hackney)",
+    "category": "safe",
+    "severity": 0.073
+  },
+  {
+    "text": "Walked past without any issues, nothing out of the ordinary #NightWalk",
+    "category": "neutral",
+    "severity": 0.149
+  },
+  {
+    "text": "Had my bag snatched while walking here, avoid this route \u2014 pretty concerning",
+    "category": "crime",
+    "severity": 0.738
+  },
+  {
+    "text": "Pavement is narrow and poorly maintained along this section \u2014 no worries",
+    "category": "road_hazard",
+    "severity": 0.232
+  },
+  {
+    "text": "Just got mugged, they stole my phone and wallet #LondonCrime",
+    "category": "crime",
+    "severity": 0.828
+  },
+  {
+    "text": "Felt really threatened by a group hanging around the corner",
+    "category": "antisocial",
+    "severity": 0.681
+  },
+  {
+    "text": "Heavy rain has made the road flood and reduced visibility a lot",
+    "category": "weather",
+    "severity": 0.377
+  },
+  {
+    "text": "Just off Stockwell \u2014 around 2am: huge pothole in the middle of the road that came out of nowhere",
+    "category": "road_hazard",
+    "severity": 0.367
+  },
+  {
+    "text": "Overgrown bushes blocking the path and reducing visibility here",
+    "category": "road_hazard",
+    "severity": 0.219
+  },
+  {
+    "text": "Lots of people around, great atmosphere, felt very comfortable here #LondonLife",
+    "category": "safe",
+    "severity": 0.072
+  },
+  {
+    "text": "This evening: constant harassment from people outside this area tonight",
+    "category": "antisocial",
+    "severity": 0.61
+  },
+  {
+    "text": "Police tape blocking the road ahead, incident overnight (near New Cross)",
+    "category": "crime",
+    "severity": 0.808
+  },
+  {
+    "text": "Just off Woolwich \u2014 light snow dusting on the road, a bit slippery in places, happened this morning",
+    "category": "weather",
+    "severity": 0.295
+  },
+  {
+    "text": "Just off Hoxton \u2014 just got mugged, they stole my phone and wallet",
+    "category": "crime",
+    "severity": 0.874
+  },
+  {
+    "text": "An hour ago: water main burst making the road impassable and slippery",
+    "category": "road_hazard",
+    "severity": 0.428
+  },
+  {
+    "text": "Drug dealing openly happening in the alley nearby (near Stratford)",
+    "category": "crime",
+    "severity": 0.53
+  },
+  {
+    "text": "A woman was violently assaulted near the bus stop just now #LondonCrime",
+    "category": "crime",
+    "severity": 0.939
+  },
+  {
+    "text": "Busy road with loads of families and couples out, very safe feeling, happened just now",
+    "category": "safe",
+    "severity": 0.079
+  },
+  {
+    "text": "Around Islington \u2014 around 2am: saw some people sitting outside but nothing threatening",
+    "category": "neutral",
+    "severity": 0.245
+  },
+  {
+    "text": "In Shoreditch \u2014 constant harassment from people outside this area tonight",
+    "category": "antisocial",
+    "severity": 0.506
+  },
+  {
+    "text": "On Dalston road \u2014 this morning: attempted robbery on this road, victim managed to escape",
+    "category": "crime",
+    "severity": 0.759
+  },
+  {
+    "text": "Few people about, no obvious safety issues I could see (near Croydon)",
+    "category": "neutral",
+    "severity": 0.156
+  },
+  {
+    "text": "Just witnessed a stabbing on this street, police are on the way, happened this morning",
+    "category": "crime",
+    "severity": 0.939
+  },
+  {
+    "text": "Loose paving slabs that wobble and could cause a fall #LondonRoads",
+    "category": "road_hazard",
+    "severity": 0.232
+  },
+  {
+    "text": "Repeated verbal abuse from someone outside the station here, happened an hour ago",
+    "category": "antisocial",
+    "severity": 0.529
+  },
+  {
+    "text": "People clearly on drugs behaving erratically near here (take care)",
+    "category": "antisocial",
+    "severity": 0.389
+  },
+  {
+    "text": "By Bethnal Green station \u2014 slippery cobblestones in the rain, saw someone fall over",
+    "category": "weather",
+    "severity": 0.329
+  },
+  {
+    "text": "Slippery cobblestones in the rain, saw someone fall over",
+    "category": "weather",
+    "severity": 0.321
+  },
+  {
+    "text": "Knife pulled on a pedestrian outside here #CrimeAlert",
+    "category": "crime",
+    "severity": 0.991
+  },
+  {
+    "text": "Looks normal here, nothing unusual happening that I can see",
+    "category": "neutral",
+    "severity": 0.083
+  },
+  {
+    "text": "Gang of youths intimidating people near the park gates, happened right now",
+    "category": "antisocial",
+    "severity": 0.596
+  },
+  {
+    "text": "Heavy rain has made the road flood and reduced visibility a lot, happened around 2am",
+    "category": "weather",
+    "severity": 0.431
+  },
+  {
+    "text": "Just got mugged, they stole my phone and wallet \u2014 extremely dangerous",
+    "category": "crime",
+    "severity": 0.867
+  },
+  {
+    "text": "Someone aggressive was blocking the path and refused to move (stay alert)",
+    "category": "antisocial",
+    "severity": 0.52
+  },
+  {
+    "text": "Knife pulled on a pedestrian outside here \u2014 a few minutes ago (near Walthamstow)",
+    "category": "crime",
+    "severity": 0.915
+  },
+  {
+    "text": "Passed through without any incident, road seems fine",
+    "category": "neutral",
+    "severity": 0.119
+  },
+  {
+    "text": "Really lovely evening walk, felt completely comfortable the whole way, happened this evening",
+    "category": "safe",
+    "severity": 0.096
+  },
+  {
+    "text": "Around Whitechapel \u2014 someone followed me down this road for several minutes, very scary \u2014 a few minutes ago",
+    "category": "antisocial",
+    "severity": 0.629
+  },
+  {
+    "text": "Phone grabbed from my hand by someone on a moped \u2014 pretty concerning",
+    "category": "crime",
+    "severity": 0.848
+  },
+  {
+    "text": "Someone aggressive was blocking the path and refused to move \u2014 at midnight (near Hackney)",
+    "category": "antisocial",
+    "severity": 0.434
+  },
+  {
+    "text": "Some broken street lights making parts of this road darker than usual #LondonRoads",
+    "category": "road_hazard",
+    "severity": 0.286
+  },
+  {
+    "text": "Someone was very threatening in their behaviour near here, happened right now",
+    "category": "antisocial",
+    "severity": 0.599
+  },
+  {
+    "text": "By Clapham station \u2014 icy conditions making it really dangerous to walk here tonight, happened an hour ago",
+    "category": "weather",
+    "severity": 0.471
+  },
+  {
+    "text": "By Croydon station \u2014 mugging happened to my friend near this spot last week, happened this morning",
+    "category": "crime",
+    "severity": 0.788
+  },
+  {
+    "text": "An hour ago: car windows smashed and belongings stolen on this street (near Dalston)",
+    "category": "crime",
+    "severity": 0.656
+  },
+  {
+    "text": "Someone was very aggressive in their behaviour near here (near Kings Cross)",
+    "category": "antisocial",
+    "severity": 0.591
+  },
+  {
+    "text": "Person acting erratically and shouting at everyone passing by (be aware)",
+    "category": "antisocial",
+    "severity": 0.483
+  },
+  {
+    "text": "Someone verbally abusing strangers outside the shops here (near New Cross)",
+    "category": "antisocial",
+    "severity": 0.557
+  },
+  {
+    "text": "Got held up at knifepoint walking through here tonight, happened tonight",
+    "category": "crime",
+    "severity": 0.919
+  },
+  {
+    "text": "Walking through Woolwich \u2014 just witnessed a stabbing on this street, police patrol are on the way",
+    "category": "crime",
+    "severity": 0.976
+  },
+  {
+    "text": "Loads of pubs and restaurants with people outside, very lively and fine, happened an hour ago",
+    "category": "safe",
+    "severity": 0.08
+  },
+  {
+    "text": "Icy conditions making it really dangerous to walk here tonight, happened at midnight",
+    "category": "weather",
+    "severity": 0.44
+  },
+  {
+    "text": "Near Shoreditch \u2014 really lovely evening walk, felt completely safe the whole way",
+    "category": "safe",
+    "severity": 0.073
+  },
+  {
+    "text": "Group of men made comments and followed me briefly, stay aware \u2014 this morning (near New Cross)",
+    "category": "antisocial",
+    "severity": 0.601
+  },
+  {
+    "text": "Just witnessed a stabbing on this street, police patrol are on the way, happened this evening",
+    "category": "crime",
+    "severity": 1.0
+  },
+  {
+    "text": "Works have removed the pavement leaving only a narrow muddy strip, happened this afternoon",
+    "category": "road_hazard",
+    "severity": 0.396
+  },
+  {
+    "text": "Just off Hoxton \u2014 light drizzle making the road surface slightly slippery",
+    "category": "weather",
+    "severity": 0.164
+  },
+  {
+    "text": "Loitering group near the ATM made me uncomfortable (near Barking)",
+    "category": "antisocial",
+    "severity": 0.347
+  },
+  {
+    "text": "Loitering group near the ATM made me uncomfortable #LondonStreets",
+    "category": "antisocial",
+    "severity": 0.387
+  },
+  {
+    "text": "Single street lamp flickering, walking feels less safe #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.218
+  },
+  {
+    "text": "Witnessed road rage that turned into a physical fight",
+    "category": "crime",
+    "severity": 0.823
+  },
+  {
+    "text": "Underpass has zero lighting tonight, very uncomfortable to walk through (stay alert)",
+    "category": "road_hazard",
+    "severity": 0.392
+  },
+  {
+    "text": "Gang of youths intimidating people near the park gates \u2014 this evening",
+    "category": "antisocial",
+    "severity": 0.634
+  },
+  {
+    "text": "Heavy rain has made the road flood and reduced visibility a lot (near Elephant and Castle)",
+    "category": "weather",
+    "severity": 0.399
+  },
+  {
+    "text": "Drug dealing openly happening in the alley nearby #BeCareful",
+    "category": "crime",
+    "severity": 0.634
+  },
+  {
+    "text": "Near Lewisham \u2014 shooting reported nearby, police have cordoned the area",
+    "category": "crime",
+    "severity": 0.908
+  },
+  {
+    "text": "Bit foggy tonight but mostly fine if you go slowly (near Croydon)",
+    "category": "weather",
+    "severity": 0.245
+  },
+  {
+    "text": "Earlier today: police arrested someone aggressively right outside here",
+    "category": "crime",
+    "severity": 0.668
+  },
+  {
+    "text": "No lighting and the path is completely dark and isolated (near Soho)",
+    "category": "road_hazard",
+    "severity": 0.477
+  },
+  {
+    "text": "Drunk group causing trouble and being threatening",
+    "category": "antisocial",
+    "severity": 0.495
+  },
+  {
+    "text": "Got mugged at knifepoint walking through here tonight \u2014 around 2am (near Stockwell)",
+    "category": "crime",
+    "severity": 0.892
+  },
+  {
+    "text": "This morning: night market nearby means it is really lively and safe feeling",
+    "category": "safe",
+    "severity": 0.136
+  },
+  {
+    "text": "Near Hoxton \u2014 huge pothole in the middle of the road that came out of nowhere",
+    "category": "road_hazard",
+    "severity": 0.364
+  },
+  {
+    "text": "Nothing happening here that I noticed, seemed pretty ordinary \u2014 no worries",
+    "category": "neutral",
+    "severity": 0.185
+  },
+  {
+    "text": "Street lights are all out on this road, completely unlit #WatchYourStep",
+    "category": "road_hazard",
+    "severity": 0.507
+  },
+  {
+    "text": "In Hoxton \u2014 saw some people sitting outside but nothing intimidating",
+    "category": "neutral",
+    "severity": 0.059
+  },
+  {
+    "text": "Burglary in progress, police called and on their way",
+    "category": "crime",
+    "severity": 0.744
+  },
+  {
+    "text": "Dense fog tonight makes it impossible to see ahead safely",
+    "category": "weather",
+    "severity": 0.441
+  },
+  {
+    "text": "This whole stretch has no street lighting at all, pitch black (take care)",
+    "category": "road_hazard",
+    "severity": 0.419
+  },
+  {
+    "text": "Gas leak reported on this road, area has been cordoned off #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.536
+  },
+  {
+    "text": "Police tape blocking the road ahead, incident overnight \u2014 quite dangerous",
+    "category": "crime",
+    "severity": 0.684
+  },
+  {
+    "text": "Black ice on the pavements here, very dangerous to walk #StaySafe",
+    "category": "weather",
+    "severity": 0.606
+  },
+  {
+    "text": "Someone was very aggressive in their behaviour near here",
+    "category": "antisocial",
+    "severity": 0.645
+  },
+  {
+    "text": "Police arrested someone aggressively right outside here, happened this morning",
+    "category": "crime",
+    "severity": 0.704
+  },
+  {
+    "text": "Just now: burglary in progress, cops called and on their way",
+    "category": "crime",
+    "severity": 0.703
+  },
+  {
+    "text": "Wallet lifted from my pocket while I was distracted \u2014 pretty concerning",
+    "category": "crime",
+    "severity": 0.731
+  },
+  {
+    "text": "Saw some people sitting outside but nothing intimidating",
+    "category": "neutral",
+    "severity": 0.176
+  },
+  {
+    "text": "Debris on the road from last night's works, watch your step #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.276
+  },
+  {
+    "text": "Light snow dusting on the road, a bit slippery in places",
+    "category": "weather",
+    "severity": 0.211
+  },
+  {
+    "text": "Graffiti gang marking territory, area feels tense tonight #BeCareful",
+    "category": "antisocial",
+    "severity": 0.38
+  },
+  {
+    "text": "In Bethnal Green \u2014 wallet lifted from my pocket while i was distracted",
+    "category": "crime",
+    "severity": 0.673
+  },
+  {
+    "text": "Black ice on the pavements here, very dangerous to walk (be aware)",
+    "category": "weather",
+    "severity": 0.527
+  },
+  {
+    "text": "Just off Barking \u2014 no lighting and the path is completely dark and isolated, happened right now",
+    "category": "road_hazard",
+    "severity": 0.455
+  },
+  {
+    "text": "Police patrol walking through regularly, area feels very secure",
+    "category": "safe",
+    "severity": 0.034
+  },
+  {
+    "text": "Busy high street with lots of shops open late, very safe vibe #LondonLife",
+    "category": "safe",
+    "severity": 0.093
+  },
+  {
+    "text": "Police patrol walking through regularly, area feels very secure, happened at midnight",
+    "category": "safe",
+    "severity": 0.062
+  },
+  {
+    "text": "By Tottenham station \u2014 normal level of activity for this time of night, no concerns",
+    "category": "neutral",
+    "severity": 0.156
+  },
+  {
+    "text": "Gravel path in poor condition makes cycling difficult and risky (near Dalston)",
+    "category": "road_hazard",
+    "severity": 0.3
+  },
+  {
+    "text": "Earlier today: just got mugged, they stole my phone and wallet",
+    "category": "crime",
+    "severity": 0.865
+  },
+  {
+    "text": "Someone just threatened me with a bottle, get out of here \u2014 absolutely terrifying",
+    "category": "crime",
+    "severity": 0.915
+  },
+  {
+    "text": "Few people about, no obvious safety issues I could see \u2014 all good",
+    "category": "neutral",
+    "severity": 0.142
+  },
+  {
+    "text": "Felt really threatened by a group hanging around the corner #BeCareful",
+    "category": "antisocial",
+    "severity": 0.624
+  },
+  {
+    "text": "Scaffolding collapsed and is blocking half the pavement dangerously (be aware)",
+    "category": "road_hazard",
+    "severity": 0.425
+  },
+  {
+    "text": "Quiet evening, saw a few people walking their dogs, nothing concerning (near Whitechapel)",
+    "category": "neutral",
+    "severity": 0.073
+  },
+  {
+    "text": "This morning: flooding on the road making it impassable and dangerous",
+    "category": "weather",
+    "severity": 0.55
+  },
+  {
+    "text": "Walking through now, seems pretty quiet tonight, nothing to report (near Hoxton)",
+    "category": "neutral",
+    "severity": 0.205
+  },
+  {
+    "text": "Just off Canary Wharf \u2014 two men arguing and pushing each other outside the pub here",
+    "category": "antisocial",
+    "severity": 0.428
+  },
+  {
+    "text": "Huge pothole in the middle of the road that came out of nowhere",
+    "category": "road_hazard",
+    "severity": 0.426
+  },
+  {
+    "text": "Near Woolwich \u2014 pavement completely broken and dangerous to walk on at night",
+    "category": "road_hazard",
+    "severity": 0.414
+  },
+  {
+    "text": "Rain has washed debris onto the road making it dangerous #StaySafe",
+    "category": "weather",
+    "severity": 0.275
+  },
+  {
+    "text": "On New Cross road \u2014 used this route regularly at night, always fine and well lit, happened at midnight",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Puddles everywhere from earlier rain, pavements are wet",
+    "category": "weather",
+    "severity": 0.2
+  },
+  {
+    "text": "Walking through Brixton \u2014 someone aggressive was blocking the path and refused to move",
+    "category": "antisocial",
+    "severity": 0.436
+  },
+  {
+    "text": "Police patrol walking through regularly, area feels very secure \u2014 all good",
+    "category": "safe",
+    "severity": 0.061
+  },
+  {
+    "text": "Felt intimidated walking past a large group on the corner, happened right now (near Islington)",
+    "category": "antisocial",
+    "severity": 0.503
+  },
+  {
+    "text": "Group of men made comments and followed me briefly, stay aware (be aware)",
+    "category": "antisocial",
+    "severity": 0.531
+  },
+  {
+    "text": "Dense fog tonight makes it impossible to see ahead safely (stay alert)",
+    "category": "weather",
+    "severity": 0.541
+  },
+  {
+    "text": "Around 2am: someone was very threatening in their behaviour near here (near Brixton)",
+    "category": "antisocial",
+    "severity": 0.606
+  },
+  {
+    "text": "In Clapham \u2014 police stationed near here tonight, area is very well covered, happened this afternoon",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Walking through Peckham \u2014 walked past without any issues, nothing out of the ordinary, happened a few minutes ago",
+    "category": "neutral",
+    "severity": 0.154
+  },
+  {
+    "text": "Knife pulled on a pedestrian outside here",
+    "category": "crime",
+    "severity": 0.962
+  },
+  {
+    "text": "Scaffolding collapsed and is blocking half the pavement dangerously #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.405
+  },
+  {
+    "text": "Not many people around at this hour but nothing major to worry about, happened right now",
+    "category": "neutral",
+    "severity": 0.276
+  },
+  {
+    "text": "Saw a man get jumped by a gang and beaten up #BeCareful",
+    "category": "crime",
+    "severity": 0.901
+  },
+  {
+    "text": "By Croydon station \u2014 busy high street with lots of shops open late, very secure vibe",
+    "category": "safe",
+    "severity": 0.101
+  },
+  {
+    "text": "Street lights are all out on this road, completely unlit (take care)",
+    "category": "road_hazard",
+    "severity": 0.428
+  },
+  {
+    "text": "Council has improved the lighting here recently, much safer now \u2014 last night",
+    "category": "safe",
+    "severity": 0.028
+  },
+  {
+    "text": "Large group of men blocking the pavement and being aggressive",
+    "category": "antisocial",
+    "severity": 0.603
+  },
+  {
+    "text": "This road is always busy and well lit, never had any issues here (near Bethnal Green)",
+    "category": "safe",
+    "severity": 0.014
+  },
+  {
+    "text": "On Elephant and Castle road \u2014 this morning: scaffolding collapsed and is blocking half the pavement dangerously",
+    "category": "road_hazard",
+    "severity": 0.42
+  },
+  {
+    "text": "Few people around but the atmosphere seems calm enough, happened tonight",
+    "category": "neutral",
+    "severity": 0.198
+  },
+  {
+    "text": "Just now: violent thunderstorm with lightning, not safe to be outside",
+    "category": "weather",
+    "severity": 0.515
+  },
+  {
+    "text": "Armed robbery at the corner shop, they had a knife",
+    "category": "crime",
+    "severity": 0.946
+  },
+  {
+    "text": "Really lovely evening walk, felt completely safe the whole way",
+    "category": "safe",
+    "severity": 0.037
+  },
+  {
+    "text": "Just passed through, fairly empty but seemed fine #NightWalk",
+    "category": "neutral",
+    "severity": 0.162
+  },
+  {
+    "text": "Pavement is narrow and poorly maintained along this section",
+    "category": "road_hazard",
+    "severity": 0.199
+  },
+  {
+    "text": "Graffiti gang marking territory, area feels tense tonight \u2014 a few minutes ago",
+    "category": "antisocial",
+    "severity": 0.366
+  },
+  {
+    "text": "This morning: well maintained area with good lighting, felt very comfortable",
+    "category": "safe",
+    "severity": 0.029
+  },
+  {
+    "text": "Around 2am: men shouting aggressively at passers-by on this street",
+    "category": "antisocial",
+    "severity": 0.642
+  },
+  {
+    "text": "This afternoon: very misty tonight, reduced visibility but still walkable",
+    "category": "weather",
+    "severity": 0.256
+  },
+  {
+    "text": "Police arrested someone aggressively right outside here (near Whitechapel)",
+    "category": "crime",
+    "severity": 0.737
+  },
+  {
+    "text": "Walking through now, seems pretty quiet tonight, nothing to report #NightWalk",
+    "category": "neutral",
+    "severity": 0.153
+  },
+  {
+    "text": "Wallet lifted from my pocket while I was distracted \u2014 just now (near Croydon)",
+    "category": "crime",
+    "severity": 0.743
+  },
+  {
+    "text": "Tonight: pavement completely broken and dangerous to walk on at night",
+    "category": "road_hazard",
+    "severity": 0.421
+  },
+  {
+    "text": "Mugging happened to my friend near this spot last week \u2014 pretty concerning",
+    "category": "crime",
+    "severity": 0.789
+  },
+  {
+    "text": "Quiet evening, saw a few people walking their dogs, nothing concerning \u2014 all good",
+    "category": "neutral",
+    "severity": 0.091
+  },
+  {
+    "text": "In Bethnal Green \u2014 armed robbery at the corner shop, they had a knife",
+    "category": "crime",
+    "severity": 0.966
+  },
+  {
+    "text": "This evening: light drizzle making the road surface slightly slippery",
+    "category": "weather",
+    "severity": 0.191
+  },
+  {
+    "text": "Thick fog with almost zero visibility walking through here (near Hoxton)",
+    "category": "weather",
+    "severity": 0.453
+  },
+  {
+    "text": "Just off Elephant and Castle \u2014 felt intimidated walking past a large group on the corner",
+    "category": "antisocial",
+    "severity": 0.437
+  },
+  {
+    "text": "A woman was violently assaulted near the bus stop just now",
+    "category": "crime",
+    "severity": 0.901
+  },
+  {
+    "text": "A bit quieter than usual but nothing unusual or alarming \u2014 feels fine",
+    "category": "neutral",
+    "severity": 0.17
+  },
+  {
+    "text": "Police patrol walking through regularly, area feels very secure \u2014 this afternoon",
+    "category": "safe",
+    "severity": 0.1
+  },
+  {
+    "text": "No lighting and the path is completely dark and isolated #LondonRoads",
+    "category": "road_hazard",
+    "severity": 0.506
+  },
+  {
+    "text": "Near Dalston \u2014 police patrol walking through regularly, area feels very secure",
+    "category": "safe",
+    "severity": 0.047
+  },
+  {
+    "text": "Night market nearby means it is really lively and safe feeling (near Shoreditch)",
+    "category": "safe",
+    "severity": 0.124
+  },
+  {
+    "text": "Felt really threatened by a group hanging around the corner \u2014 pretty concerning",
+    "category": "antisocial",
+    "severity": 0.546
+  },
+  {
+    "text": "Busy high street with lots of shops open late, very safe vibe, happened around 2am (near Kings Cross)",
+    "category": "safe",
+    "severity": 0.028
+  },
+  {
+    "text": "Earlier today: someone followed me down this road for several minutes, very scary",
+    "category": "antisocial",
+    "severity": 0.685
+  },
+  {
+    "text": "This road is always busy and well lit, never had any issues here \u2014 feels fine",
+    "category": "safe",
+    "severity": 0.112
+  },
+  {
+    "text": "Loads of pubs and restaurants with people outside, very lively and safe",
+    "category": "safe",
+    "severity": 0.101
+  },
+  {
+    "text": "Cobblestones in poor condition, slippery and uneven underfoot #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.245
+  },
+  {
+    "text": "Walking through Camden \u2014 tonight: someone got stabbed outside the shop here tonight",
+    "category": "crime",
+    "severity": 0.916
+  },
+  {
+    "text": "Earlier today: strong gusts knocking people over near the open stretch",
+    "category": "weather",
+    "severity": 0.4
+  },
+  {
+    "text": "Drunk group causing trouble and being threatening \u2014 last night",
+    "category": "antisocial",
+    "severity": 0.485
+  },
+  {
+    "text": "Well-lit road with constant foot traffic, never felt unsafe here \u2014 all good",
+    "category": "safe",
+    "severity": 0.071
+  },
+  {
+    "text": "Gas leak reported on this road, area has been cordoned off, happened around 2am (near Islington)",
+    "category": "road_hazard",
+    "severity": 0.509
+  },
+  {
+    "text": "Around 2am: saw some people sitting outside but nothing threatening",
+    "category": "neutral",
+    "severity": 0.183
+  },
+  {
+    "text": "Graffiti group of men marking territory, area feels tense tonight",
+    "category": "antisocial",
+    "severity": 0.382
+  },
+  {
+    "text": "Attempted robbery on this road, victim managed to escape #StaySafe",
+    "category": "crime",
+    "severity": 0.814
+  },
+  {
+    "text": "Constant harassment from people outside this area tonight (stay alert)",
+    "category": "antisocial",
+    "severity": 0.553
+  },
+  {
+    "text": "Armed robbery at the corner shop, they had a knife #BeCareful",
+    "category": "crime",
+    "severity": 0.975
+  },
+  {
+    "text": "Walking through Woolwich \u2014 an hour ago: windy evening making the walk less pleasant but manageable",
+    "category": "weather",
+    "severity": 0.168
+  },
+  {
+    "text": "Fairly standard walk, nothing notable or worrying to mention",
+    "category": "neutral",
+    "severity": 0.145
+  },
+  {
+    "text": "Well maintained area with good lighting, felt very comfortable (near Clapham)",
+    "category": "safe",
+    "severity": 0.032
+  },
+  {
+    "text": "Light snow dusting on the road, a bit icy in places",
+    "category": "weather",
+    "severity": 0.29
+  },
+  {
+    "text": "Someone was very threatening in their behaviour near here \u2014 quite dangerous",
+    "category": "antisocial",
+    "severity": 0.616
+  },
+  {
+    "text": "Around Woolwich \u2014 gang of youths intimidating people near the park gates",
+    "category": "antisocial",
+    "severity": 0.693
+  },
+  {
+    "text": "Shooting reported nearby, police have cordoned the area",
+    "category": "crime",
+    "severity": 0.942
+  },
+  {
+    "text": "Gas leak reported on this road, area has been cordoned off, happened at midnight",
+    "category": "road_hazard",
+    "severity": 0.364
+  },
+  {
+    "text": "Just witnessed a stabbing on this street, police are on the way",
+    "category": "crime",
+    "severity": 0.974
+  },
+  {
+    "text": "Normal level of activity for this time of night, no concerns",
+    "category": "neutral",
+    "severity": 0.182
+  },
+  {
+    "text": "Around Hackney \u2014 overgrown bushes blocking the path and reducing visibility here \u2014 earlier today",
+    "category": "road_hazard",
+    "severity": 0.249
+  },
+  {
+    "text": "Knife pulled on a pedestrian outside here \u2014 absolutely terrifying",
+    "category": "crime",
+    "severity": 0.94
+  },
+  {
+    "text": "Single street lamp flickering, walking feels less safe",
+    "category": "road_hazard",
+    "severity": 0.199
+  },
+  {
+    "text": "By Kings Cross station \u2014 saw a man get jumped by a gang and beaten up",
+    "category": "crime",
+    "severity": 0.893
+  },
+  {
+    "text": "An hour ago: just walked this route alone and felt completely fine, recommend it",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Police arrested someone aggressively right outside here #LondonCrime",
+    "category": "crime",
+    "severity": 0.639
+  },
+  {
+    "text": "Rain has washed debris onto the road making it dangerous",
+    "category": "weather",
+    "severity": 0.284
+  },
+  {
+    "text": "By Stratford station \u2014 windy evening making the walk less pleasant but manageable",
+    "category": "weather",
+    "severity": 0.195
+  },
+  {
+    "text": "Loads of pubs and restaurants with people outside, very lively and safe #AllGood",
+    "category": "safe",
+    "severity": 0.123
+  },
+  {
+    "text": "Walked past without any issues, nothing out of the ordinary \u2014 this evening",
+    "category": "neutral",
+    "severity": 0.175
+  },
+  {
+    "text": "Pavement completely broken and dangerous to walk on at night #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.409
+  },
+  {
+    "text": "Night market nearby means it is really lively and safe feeling",
+    "category": "safe",
+    "severity": 0.099
+  },
+  {
+    "text": "Men shouting aggressively at passers-by on this street",
+    "category": "antisocial",
+    "severity": 0.561
+  },
+  {
+    "text": "Gang of youths intimidating people near the park gates",
+    "category": "antisocial",
+    "severity": 0.693
+  },
+  {
+    "text": "Just off Walthamstow \u2014 earlier today: person acting erratically and shouting at everyone passing by",
+    "category": "antisocial",
+    "severity": 0.437
+  },
+  {
+    "text": "By Hoxton station \u2014 gravel path in poor condition makes cycling difficult and risky \u2014 earlier today",
+    "category": "road_hazard",
+    "severity": 0.269
+  },
+  {
+    "text": "Underpass has zero lighting tonight, very uncomfortable to walk through #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.388
+  },
+  {
+    "text": "Quiet evening, saw a few people walking their dogs, nothing concerning \u2014 at midnight",
+    "category": "neutral",
+    "severity": 0.075
+  },
+  {
+    "text": "No lighting and the path is completely dark and isolated (stay alert)",
+    "category": "road_hazard",
+    "severity": 0.49
+  },
+  {
+    "text": "Someone just threatened me with a bottle, get out of here, happened tonight (near Clapham)",
+    "category": "crime",
+    "severity": 0.841
+  },
+  {
+    "text": "Busy high street with lots of shops open late, very secure vibe",
+    "category": "safe",
+    "severity": 0.079
+  },
+  {
+    "text": "Heavy snow and ice making every step dangerous tonight #StaySafe",
+    "category": "weather",
+    "severity": 0.5
+  },
+  {
+    "text": "Roads flooded and pavement submerged, take another route \u2014 this afternoon",
+    "category": "weather",
+    "severity": 0.502
+  },
+  {
+    "text": "On Barking road \u2014 few people about, no obvious safety issues i could see, happened this morning",
+    "category": "neutral",
+    "severity": 0.113
+  },
+  {
+    "text": "Around Hackney \u2014 single street lamp flickering, walking feels less safe",
+    "category": "road_hazard",
+    "severity": 0.199
+  },
+  {
+    "text": "Quiet evening, saw a few people walking their dogs, nothing concerning \u2014 this evening",
+    "category": "neutral",
+    "severity": 0.174
+  },
+  {
+    "text": "Bit dark around here but nothing sketchy going on \u2014 feels fine",
+    "category": "neutral",
+    "severity": 0.204
+  },
+  {
+    "text": "Light drizzle making the road surface slightly slippery #TakeExtra Care",
+    "category": "weather",
+    "severity": 0.179
+  },
+  {
+    "text": "Overcast and breezy tonight, nothing serious but take care #LondonWeather",
+    "category": "weather",
+    "severity": 0.253
+  },
+  {
+    "text": "Well maintained area with good lighting, felt very comfortable #SafeStreets",
+    "category": "safe",
+    "severity": 0.079
+  },
+  {
+    "text": "Someone verbally abusing strangers outside the shops here (be aware)",
+    "category": "antisocial",
+    "severity": 0.464
+  },
+  {
+    "text": "Police stationed near here tonight, area is very well covered",
+    "category": "safe",
+    "severity": 0.024
+  },
+  {
+    "text": "At midnight: loose paving slabs that wobble and could cause a fall (near Peckham)",
+    "category": "road_hazard",
+    "severity": 0.258
+  },
+  {
+    "text": "Really lovely evening walk, felt completely safe the whole way, happened a few minutes ago",
+    "category": "safe",
+    "severity": 0.018
+  },
+  {
+    "text": "Group asking for money very aggressively, would not take no, happened last night",
+    "category": "antisocial",
+    "severity": 0.563
+  },
+  {
+    "text": "Pavement completely broken and dangerous to walk on at night (stay alert)",
+    "category": "road_hazard",
+    "severity": 0.425
+  },
+  {
+    "text": "Families and dog walkers everywhere, completely safe atmosphere \u2014 earlier today",
+    "category": "safe",
+    "severity": 0.1
+  },
+  {
+    "text": "Just off Soho \u2014 street lights are all out on this road, completely unlit",
+    "category": "road_hazard",
+    "severity": 0.502
+  },
+  {
+    "text": "Someone aggressive was blocking the path and refused to move #StaySafe",
+    "category": "antisocial",
+    "severity": 0.495
+  },
+  {
+    "text": "Just witnessed a stabbing on this street, police patrol are on the way",
+    "category": "crime",
+    "severity": 0.973
+  },
+  {
+    "text": "Witnessed road rage that turned into a physical fight #BeCareful",
+    "category": "crime",
+    "severity": 0.765
+  },
+  {
+    "text": "Slippery cobblestones in the rain, saw someone fall over #TakeExtra Care",
+    "category": "weather",
+    "severity": 0.348
+  },
+  {
+    "text": "By Stockwell station \u2014 sketchy group of people hanging around the underpass",
+    "category": "antisocial",
+    "severity": 0.377
+  },
+  {
+    "text": "Nothing happening here that I noticed, seemed pretty ordinary (near Walthamstow)",
+    "category": "neutral",
+    "severity": 0.112
+  },
+  {
+    "text": "Windy evening making the walk less pleasant but manageable \u2014 no worries",
+    "category": "weather",
+    "severity": 0.097
+  },
+  {
+    "text": "Heavy snow and ice making every step dangerous tonight \u2014 around 2am",
+    "category": "weather",
+    "severity": 0.475
+  },
+  {
+    "text": "Group asking for money very aggressively, would not take no #StaySafe",
+    "category": "antisocial",
+    "severity": 0.56
+  },
+  {
+    "text": "Looks normal here, nothing unusual happening that I can see \u2014 no worries",
+    "category": "neutral",
+    "severity": 0.064
+  },
+  {
+    "text": "Knife pulled on a pedestrian outside here \u2014 tonight",
+    "category": "crime",
+    "severity": 0.903
+  },
+  {
+    "text": "Not a lot going on here, uneventful walk through \u2014 right now (near Peckham)",
+    "category": "neutral",
+    "severity": 0.06
+  },
+  {
+    "text": "Near Clapham \u2014 earlier today: felt really threatened by a group hanging around the corner",
+    "category": "antisocial",
+    "severity": 0.594
+  },
+  {
+    "text": "Thick fog with almost zero visibility walking through here",
+    "category": "weather",
+    "severity": 0.497
+  },
+  {
+    "text": "In Islington \u2014 earlier today: not many people around at this hour but nothing major to worry about",
+    "category": "neutral",
+    "severity": 0.206
+  },
+  {
+    "text": "Rain has washed debris onto the road making it dangerous, happened a few minutes ago (near Walthamstow)",
+    "category": "weather",
+    "severity": 0.318
+  },
+  {
+    "text": "Strong gusts knocking people over near the open stretch (be aware)",
+    "category": "weather",
+    "severity": 0.39
+  },
+  {
+    "text": "Group asking for money very aggressively, would not take no",
+    "category": "antisocial",
+    "severity": 0.543
+  },
+  {
+    "text": "Black ice on the pavements here, very dangerous to walk, happened this evening (near Elephant and Castle)",
+    "category": "weather",
+    "severity": 0.588
+  },
+  {
+    "text": "Witnessed road rage that turned into a physical fight, happened a few minutes ago",
+    "category": "crime",
+    "severity": 0.764
+  },
+  {
+    "text": "Had my bag snatched while walking here, avoid this route #CrimeAlert",
+    "category": "crime",
+    "severity": 0.873
+  },
+  {
+    "text": "Just off Hackney \u2014 burglary in progress, cops called and on their way",
+    "category": "crime",
+    "severity": 0.693
+  },
+  {
+    "text": "On Canary Wharf road \u2014 just got held up, they stole my phone and wallet",
+    "category": "crime",
+    "severity": 0.857
+  },
+  {
+    "text": "Just walked this route alone and felt completely fine, recommend it",
+    "category": "safe",
+    "severity": 0.074
+  },
+  {
+    "text": "Someone just threatened me with a bottle, get out of here",
+    "category": "crime",
+    "severity": 0.888
+  },
+  {
+    "text": "Rain is picking up, roads are getting wet and slippery #LondonWeather",
+    "category": "weather",
+    "severity": 0.245
+  },
+  {
+    "text": "Around Peckham \u2014 around 2am: someone verbally abusing strangers outside the shops here",
+    "category": "antisocial",
+    "severity": 0.479
+  },
+  {
+    "text": "Police patrol walking through regularly, area feels very secure",
+    "category": "safe",
+    "severity": 0.04
+  },
+  {
+    "text": "Got mugged at knifepoint walking through here tonight #BeCareful",
+    "category": "crime",
+    "severity": 0.914
+  },
+  {
+    "text": "Few people about, no obvious safety issues I could see",
+    "category": "neutral",
+    "severity": 0.159
+  },
+  {
+    "text": "Just off Stockwell \u2014 heard loud fight nearby, sounds like someone got hurt",
+    "category": "crime",
+    "severity": 0.722
+  },
+  {
+    "text": "Mugging happened to my friend near this spot last week (near Brixton)",
+    "category": "crime",
+    "severity": 0.915
+  },
+  {
+    "text": "A bit quieter than usual but nothing unusual or alarming, happened this afternoon",
+    "category": "neutral",
+    "severity": 0.208
+  },
+  {
+    "text": "Right now: witnessed road rage that turned into a physical fight (near Peckham)",
+    "category": "crime",
+    "severity": 0.786
+  },
+  {
+    "text": "Well-lit road with constant foot traffic, never felt unsafe here #AllGood",
+    "category": "safe",
+    "severity": 0.071
+  },
+  {
+    "text": "Pavement is narrow and poorly maintained along this section, happened tonight",
+    "category": "road_hazard",
+    "severity": 0.158
+  },
+  {
+    "text": "Around Woolwich \u2014 used this route regularly at night, always fine and well lit",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Two men arguing and pushing each other outside the pub here \u2014 this evening",
+    "category": "antisocial",
+    "severity": 0.356
+  },
+  {
+    "text": "Security guard stationed nearby, feel very safe here \u2014 feels fine",
+    "category": "safe",
+    "severity": 0.056
+  },
+  {
+    "text": "Loitering group near the ATM made me uncomfortable",
+    "category": "antisocial",
+    "severity": 0.38
+  },
+  {
+    "text": "Always feel safe walking this route, lots of CCTV and foot traffic",
+    "category": "safe",
+    "severity": 0.105
+  },
+  {
+    "text": "In Dalston \u2014 families and dog walkers everywhere, completely safe atmosphere",
+    "category": "safe",
+    "severity": 0.09
+  },
+  {
+    "text": "In Soho \u2014 pavement is narrow and poorly maintained along this section",
+    "category": "road_hazard",
+    "severity": 0.278
+  },
+  {
+    "text": "Just off Barking \u2014 heavy rain and poor drainage flooding the underpass",
+    "category": "weather",
+    "severity": 0.436
+  },
+  {
+    "text": "Nothing happening here that I noticed, seemed pretty ordinary, happened a few minutes ago (near Islington)",
+    "category": "neutral",
+    "severity": 0.16
+  },
+  {
+    "text": "Around Stockwell \u2014 busy road with loads of families and couples out, very fine feeling",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Gang of youths intimidating people near the park gates \u2014 worrying",
+    "category": "antisocial",
+    "severity": 0.636
+  },
+  {
+    "text": "Repeated verbal abuse from someone outside the station here (stay alert)",
+    "category": "antisocial",
+    "severity": 0.433
+  },
+  {
+    "text": "Saw some people sitting outside but nothing intimidating, happened last night",
+    "category": "neutral",
+    "severity": 0.108
+  },
+  {
+    "text": "Burglary in progress, cops called and on their way",
+    "category": "crime",
+    "severity": 0.717
+  },
+  {
+    "text": "Walking through Peckham \u2014 at midnight: lovely community feel around here, people are friendly and area is safe",
+    "category": "safe",
+    "severity": 0.07
+  },
+  {
+    "text": "Debris on the road from last night's works, watch your step, happened earlier today (near Woolwich)",
+    "category": "road_hazard",
+    "severity": 0.207
+  },
+  {
+    "text": "Got mugged at knifepoint walking through here tonight (near Whitechapel)",
+    "category": "crime",
+    "severity": 0.893
+  },
+  {
+    "text": "Just now: rain is picking up, roads are getting wet and slippery (near Whitechapel)",
+    "category": "weather",
+    "severity": 0.201
+  },
+  {
+    "text": "Lovely community feel around here, people are friendly and area is safe \u2014 feels fine",
+    "category": "safe",
+    "severity": 0.049
+  },
+  {
+    "text": "Icy conditions making it really dangerous to walk here tonight (stay alert)",
+    "category": "weather",
+    "severity": 0.464
+  },
+  {
+    "text": "Around Lewisham \u2014 pretty deserted but nothing to suggest danger",
+    "category": "neutral",
+    "severity": 0.22
+  },
+  {
+    "text": "Bit foggy tonight but mostly fine if you go slowly, happened around 2am",
+    "category": "weather",
+    "severity": 0.138
+  },
+  {
+    "text": "Burglary in progress, police called and on their way #LondonCrime",
+    "category": "crime",
+    "severity": 0.75
+  },
+  {
+    "text": "Light snow dusting on the road, a bit slippery in places #LondonWeather",
+    "category": "weather",
+    "severity": 0.269
+  },
+  {
+    "text": "Drunk group causing trouble and being threatening (take care)",
+    "category": "antisocial",
+    "severity": 0.598
+  },
+  {
+    "text": "In Barking \u2014 few people around but the atmosphere seems calm enough",
+    "category": "neutral",
+    "severity": 0.186
+  },
+  {
+    "text": "Near Shoreditch \u2014 families and dog walkers everywhere, completely no issues atmosphere",
+    "category": "safe",
+    "severity": 0.049
+  },
+  {
+    "text": "Person acting erratically and shouting at everyone passing by",
+    "category": "antisocial",
+    "severity": 0.538
+  },
+  {
+    "text": "Just off Elephant and Castle \u2014 a few minutes ago: armed robbery at the corner shop, they had a knife",
+    "category": "crime",
+    "severity": 0.892
+  },
+  {
+    "text": "Walking through now, seems pretty quiet tonight, nothing to report",
+    "category": "neutral",
+    "severity": 0.108
+  },
+  {
+    "text": "Just off Croydon \u2014 not many people around at this hour but nothing major to worry about",
+    "category": "neutral",
+    "severity": 0.145
+  },
+  {
+    "text": "People clearly on drugs behaving erratically near here \u2014 tonight",
+    "category": "antisocial",
+    "severity": 0.418
+  },
+  {
+    "text": "Heard loud fight nearby, sounds like someone got hurt \u2014 this evening",
+    "category": "crime",
+    "severity": 0.788
+  },
+  {
+    "text": "Rain is picking up, roads are getting wet and slippery \u2014 feels fine",
+    "category": "weather",
+    "severity": 0.243
+  },
+  {
+    "text": "Walked past without any issues, nothing out of the ordinary \u2014 no worries",
+    "category": "neutral",
+    "severity": 0.177
+  },
+  {
+    "text": "Not a lot going on here, uneventful walk through #LondonLife",
+    "category": "neutral",
+    "severity": 0.204
+  },
+  {
+    "text": "Lots of people around, great atmosphere, felt very comfortable here \u2014 feels fine",
+    "category": "safe",
+    "severity": 0.087
+  },
+  {
+    "text": "It is pretty empty here tonight but I felt okay walking through",
+    "category": "neutral",
+    "severity": 0.148
+  },
+  {
+    "text": "Lots of people around, great atmosphere, felt very comfortable here \u2014 earlier today",
+    "category": "safe",
+    "severity": 0.059
+  },
+  {
+    "text": "On Dalston road \u2014 debris on the road from last night's works, watch your step",
+    "category": "road_hazard",
+    "severity": 0.222
+  },
+  {
+    "text": "Busy road with loads of families and couples out, very safe feeling \u2014 feels fine",
+    "category": "safe",
+    "severity": 0.107
+  },
+  {
+    "text": "This afternoon: lovely community feel around here, people are friendly and area is safe",
+    "category": "safe",
+    "severity": 0.027
+  },
+  {
+    "text": "A few minutes ago: heavy rain and poor drainage flooding the underpass",
+    "category": "weather",
+    "severity": 0.345
+  },
+  {
+    "text": "In Walthamstow \u2014 slippery cobblestones in the rain, saw someone fall over, happened this morning",
+    "category": "weather",
+    "severity": 0.301
+  },
+  {
+    "text": "Walking through Tottenham \u2014 last night: police arrested someone aggressively right outside here",
+    "category": "crime",
+    "severity": 0.668
+  },
+  {
+    "text": "A bit quieter than usual but nothing unusual or alarming (near Peckham)",
+    "category": "neutral",
+    "severity": 0.183
+  },
+  {
+    "text": "Security guard stationed nearby, feel very secure here (near Hoxton)",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Near Shoreditch \u2014 just walked this route alone and felt completely fine, recommend it",
+    "category": "safe",
+    "severity": 0.09
+  },
+  {
+    "text": "Police arrested someone aggressively right outside here",
+    "category": "crime",
+    "severity": 0.649
+  },
+  {
+    "text": "Someone got stabbed outside the shop here tonight #CrimeAlert",
+    "category": "crime",
+    "severity": 0.941
+  },
+  {
+    "text": "Walking through Shoreditch \u2014 graffiti group of men marking territory, area feels tense tonight",
+    "category": "antisocial",
+    "severity": 0.328
+  },
+  {
+    "text": "Got mugged at knifepoint walking through here tonight",
+    "category": "crime",
+    "severity": 0.966
+  },
+  {
+    "text": "Several street lights broken making the path very dark #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.442
+  },
+  {
+    "text": "Heavy rain and poor drainage flooding the underpass \u2014 an hour ago (near Canary Wharf)",
+    "category": "weather",
+    "severity": 0.423
+  },
+  {
+    "text": "CCTV cameras everywhere and well lit, feels very safe tonight #AllGood",
+    "category": "safe",
+    "severity": 0.017
+  },
+  {
+    "text": "Loose paving slabs that wobble and could cause a fall",
+    "category": "road_hazard",
+    "severity": 0.249
+  },
+  {
+    "text": "Pretty deserted but nothing to suggest danger",
+    "category": "neutral",
+    "severity": 0.268
+  },
+  {
+    "text": "Strong gusts knocking people over near the open stretch #LondonWeather",
+    "category": "weather",
+    "severity": 0.422
+  },
+  {
+    "text": "Around 2am: someone verbally abusing strangers outside the shops here",
+    "category": "antisocial",
+    "severity": 0.52
+  },
+  {
+    "text": "Just off Stockwell \u2014 group of men made comments and followed me briefly, stay aware",
+    "category": "antisocial",
+    "severity": 0.528
+  },
+  {
+    "text": "Near Lewisham \u2014 always feel safe walking this route, lots of cctv and foot traffic",
+    "category": "safe",
+    "severity": 0.059
+  },
+  {
+    "text": "Single street lamp flickering, walking feels less safe, happened this afternoon (near Tottenham)",
+    "category": "road_hazard",
+    "severity": 0.253
+  },
+  {
+    "text": "CCTV cameras everywhere and well lit, feels very safe tonight",
+    "category": "safe",
+    "severity": 0.034
+  },
+  {
+    "text": "Overgrown bushes blocking the path and reducing visibility here \u2014 feels fine",
+    "category": "road_hazard",
+    "severity": 0.281
+  },
+  {
+    "text": "Car windows smashed and belongings stolen on this street",
+    "category": "crime",
+    "severity": 0.586
+  },
+  {
+    "text": "Fairly standard walk, nothing notable or worrying to mention \u2014 no worries",
+    "category": "neutral",
+    "severity": 0.068
+  },
+  {
+    "text": "CCTV cameras everywhere and well lit, feels very comfortable tonight \u2014 this evening",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Near Clapham \u2014 just witnessed a stabbing on this street, police are on the way, happened tonight",
+    "category": "crime",
+    "severity": 0.99
+  },
+  {
+    "text": "Busy high street with lots of shops open late, very safe vibe",
+    "category": "safe",
+    "severity": 0.121
+  },
+  {
+    "text": "Water main burst making the road impassable and slippery (near Tottenham)",
+    "category": "road_hazard",
+    "severity": 0.372
+  },
+  {
+    "text": "Black ice on the pavements here, very dangerous to walk, happened a few minutes ago",
+    "category": "weather",
+    "severity": 0.619
+  },
+  {
+    "text": "Around Hackney \u2014 around 2am: well maintained area with good lighting, felt very comfortable",
+    "category": "safe",
+    "severity": 0.075
+  },
+  {
+    "text": "An hour ago: police tape blocking the road ahead, incident overnight",
+    "category": "crime",
+    "severity": 0.735
+  },
+  {
+    "text": "Wind so strong umbrellas are useless and vision is affected",
+    "category": "weather",
+    "severity": 0.363
+  },
+  {
+    "text": "This afternoon: had my bag snatched while walking here, avoid this route",
+    "category": "crime",
+    "severity": 0.853
+  },
+  {
+    "text": "By Barking station \u2014 security guard stationed nearby, feel very safe here, happened an hour ago",
+    "category": "safe",
+    "severity": 0.002
+  },
+  {
+    "text": "It is pretty empty here tonight but I felt okay walking through #NightWalk",
+    "category": "neutral",
+    "severity": 0.196
+  },
+  {
+    "text": "Saw a pickpocket working the area, be careful with your pockets \u2014 pretty concerning",
+    "category": "crime",
+    "severity": 0.758
+  },
+  {
+    "text": "In Barking \u2014 graffiti gang marking territory, area feels tense tonight",
+    "category": "antisocial",
+    "severity": 0.387
+  },
+  {
+    "text": "Windy evening making the walk less pleasant but manageable",
+    "category": "weather",
+    "severity": 0.216
+  },
+  {
+    "text": "This morning: violent thunderstorm with lightning, not safe to be outside (near Canary Wharf)",
+    "category": "weather",
+    "severity": 0.466
+  },
+  {
+    "text": "Rain has washed debris onto the road making it dangerous (be aware)",
+    "category": "weather",
+    "severity": 0.34
+  },
+  {
+    "text": "Saw some people sitting outside but nothing threatening (near Hoxton)",
+    "category": "neutral",
+    "severity": 0.154
+  },
+  {
+    "text": "Flooding on the road making it impassable and dangerous (take care)",
+    "category": "weather",
+    "severity": 0.478
+  },
+  {
+    "text": "Quiet evening, saw a few people walking their dogs, nothing concerning",
+    "category": "neutral",
+    "severity": 0.066
+  },
+  {
+    "text": "Light snow dusting on the road, a bit slippery in places \u2014 right now",
+    "category": "weather",
+    "severity": 0.285
+  },
+  {
+    "text": "Just off Dalston \u2014 this afternoon: fairly standard walk, nothing notable or worrying to mention",
+    "category": "neutral",
+    "severity": 0.06
+  },
+  {
+    "text": "Nothing to report here, normal evening on this road \u2014 feels fine",
+    "category": "neutral",
+    "severity": 0.145
+  },
+  {
+    "text": "Earlier today: loitering group near the atm made me uncomfortable (near Stockwell)",
+    "category": "antisocial",
+    "severity": 0.446
+  },
+  {
+    "text": "Nothing happening here that I noticed, seemed pretty ordinary",
+    "category": "neutral",
+    "severity": 0.115
+  },
+  {
+    "text": "CCTV cameras everywhere and well lit, feels very safe tonight \u2014 no worries",
+    "category": "safe",
+    "severity": 0.097
+  },
+  {
+    "text": "Water main burst making the road impassable and slippery \u2014 earlier today (near Clapham)",
+    "category": "road_hazard",
+    "severity": 0.425
+  },
+  {
+    "text": "Overcast and breezy tonight, nothing serious but take care, happened tonight",
+    "category": "weather",
+    "severity": 0.153
+  },
+  {
+    "text": "Last night: constant harassment from people outside this area tonight (near Brixton)",
+    "category": "antisocial",
+    "severity": 0.552
+  },
+  {
+    "text": "Works have removed the pavement leaving only a narrow muddy strip (take care)",
+    "category": "road_hazard",
+    "severity": 0.301
+  },
+  {
+    "text": "Thick fog with almost zero visibility walking through here (take care)",
+    "category": "weather",
+    "severity": 0.521
+  },
+  {
+    "text": "Just off Peckham \u2014 police stationed near here tonight, area is very well covered",
+    "category": "safe",
+    "severity": 0.007
+  },
+  {
+    "text": "On Tottenham road \u2014 loads of pubs and restaurants with people outside, very lively and safe",
+    "category": "safe",
+    "severity": 0.044
+  },
+  {
+    "text": "Underpass has zero lighting tonight, very uncomfortable to walk through, happened right now",
+    "category": "road_hazard",
+    "severity": 0.398
+  },
+  {
+    "text": "Police tape blocking the road ahead, incident overnight \u2014 earlier today",
+    "category": "crime",
+    "severity": 0.712
+  },
+  {
+    "text": "Near Stratford \u2014 burglary in progress, police called and on their way",
+    "category": "crime",
+    "severity": 0.728
+  },
+  {
+    "text": "Passed through without any incident, road seems fine \u2014 no worries",
+    "category": "neutral",
+    "severity": 0.101
+  },
+  {
+    "text": "Cobblestones in poor condition, slippery and uneven underfoot, happened around 2am",
+    "category": "road_hazard",
+    "severity": 0.249
+  },
+  {
+    "text": "Just got held up, they stole my phone and wallet, happened this morning",
+    "category": "crime",
+    "severity": 0.81
+  },
+  {
+    "text": "Always feel safe walking this route, lots of CCTV and foot traffic, happened around 2am",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Police patrol walking through regularly, area feels very secure (near Peckham)",
+    "category": "safe",
+    "severity": 0.03
+  },
+  {
+    "text": "Used this route regularly at night, always fine and well lit",
+    "category": "safe",
+    "severity": 0.024
+  },
+  {
+    "text": "This whole stretch has no street lighting at all, pitch black, happened last night",
+    "category": "road_hazard",
+    "severity": 0.547
+  },
+  {
+    "text": "Few people around but the atmosphere seems calm enough",
+    "category": "neutral",
+    "severity": 0.121
+  },
+  {
+    "text": "Heavy rain has made the road flood and reduced visibility a lot (stay alert)",
+    "category": "weather",
+    "severity": 0.404
+  },
+  {
+    "text": "Roads flooded and pavement submerged, take another route #LondonWeather",
+    "category": "weather",
+    "severity": 0.457
+  },
+  {
+    "text": "Attempted robbery on this road, victim managed to escape (near Barking)",
+    "category": "crime",
+    "severity": 0.8
+  },
+  {
+    "text": "Near Lewisham \u2014 black ice on the pavements here, very dangerous to walk",
+    "category": "weather",
+    "severity": 0.654
+  },
+  {
+    "text": "Underpass has zero lighting tonight, very uncomfortable to walk through (near Canary Wharf)",
+    "category": "road_hazard",
+    "severity": 0.442
+  },
+  {
+    "text": "Gang of youths intimidating people near the park gates #LondonStreets",
+    "category": "antisocial",
+    "severity": 0.703
+  },
+  {
+    "text": "Near Camden \u2014 road surface is really broken and dangerous here",
+    "category": "road_hazard",
+    "severity": 0.365
+  },
+  {
+    "text": "Puddles everywhere from earlier rain, pavements are wet \u2014 all good",
+    "category": "weather",
+    "severity": 0.085
+  },
+  {
+    "text": "Repeated verbal abuse from someone outside the station here \u2014 just now (near Lewisham)",
+    "category": "antisocial",
+    "severity": 0.571
+  },
+  {
+    "text": "Police patrol walking through regularly, area feels very secure #SafeStreets",
+    "category": "safe",
+    "severity": 0.094
+  },
+  {
+    "text": "Dense fog tonight makes it impossible to see ahead safely \u2014 just now (near Woolwich)",
+    "category": "weather",
+    "severity": 0.518
+  },
+  {
+    "text": "Men shouting aggressively at passers-by on this street, happened earlier today (near Croydon)",
+    "category": "antisocial",
+    "severity": 0.636
+  },
+  {
+    "text": "Last night: saw someone being followed and harassed down this road",
+    "category": "antisocial",
+    "severity": 0.614
+  },
+  {
+    "text": "Police tape blocking the road ahead, incident overnight (near Islington)",
+    "category": "crime",
+    "severity": 0.669
+  },
+  {
+    "text": "This afternoon: police stationed near here tonight, area is very well covered",
+    "category": "safe",
+    "severity": 0.031
+  },
+  {
+    "text": "Two men arguing and pushing each other outside the pub here",
+    "category": "antisocial",
+    "severity": 0.441
+  },
+  {
+    "text": "Youths throwing things at cars and pedestrians on this road \u2014 worrying",
+    "category": "antisocial",
+    "severity": 0.555
+  },
+  {
+    "text": "Roads flooded and pavement submerged, take another route (be aware)",
+    "category": "weather",
+    "severity": 0.526
+  },
+  {
+    "text": "Wallet lifted from my pocket while I was distracted #LondonCrime",
+    "category": "crime",
+    "severity": 0.698
+  },
+  {
+    "text": "Scaffolding collapsed and is blocking half the pavement dangerously",
+    "category": "road_hazard",
+    "severity": 0.484
+  },
+  {
+    "text": "Sketchy group of people hanging around the underpass, happened earlier today (near Whitechapel)",
+    "category": "antisocial",
+    "severity": 0.421
+  },
+  {
+    "text": "Some broken street lights making parts of this road darker than usual (be aware)",
+    "category": "road_hazard",
+    "severity": 0.263
+  },
+  {
+    "text": "Security guard stationed nearby, feel very safe here",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Someone followed me down this road for several minutes, very scary \u2014 pretty concerning",
+    "category": "antisocial",
+    "severity": 0.645
+  },
+  {
+    "text": "Overgrown bushes blocking the path and reducing visibility here #LondonRoads",
+    "category": "road_hazard",
+    "severity": 0.235
+  },
+  {
+    "text": "Walking through Kings Cross \u2014 always feel safe walking this route, lots of cctv and foot traffic \u2014 this afternoon",
+    "category": "safe",
+    "severity": 0.063
+  },
+  {
+    "text": "Huge broken tarmac in the middle of the road that came out of nowhere \u2014 right now",
+    "category": "road_hazard",
+    "severity": 0.405
+  },
+  {
+    "text": "Shooting reported nearby, police presence have cordoned the area",
+    "category": "crime",
+    "severity": 0.938
+  },
+  {
+    "text": "Loitering group near the ATM made me uncomfortable (stay alert)",
+    "category": "antisocial",
+    "severity": 0.416
+  },
+  {
+    "text": "Bit dark around here but nothing sketchy going on (near Stratford)",
+    "category": "neutral",
+    "severity": 0.204
+  },
+  {
+    "text": "Really lovely evening walk, felt completely comfortable the whole way",
+    "category": "safe",
+    "severity": 0.066
+  },
+  {
+    "text": "Just now: scaffolding collapsed and is blocking half the pavement dangerously",
+    "category": "road_hazard",
+    "severity": 0.344
+  },
+  {
+    "text": "In Hackney \u2014 bit dark around here but nothing sketchy going on \u2014 around 2am",
+    "category": "neutral",
+    "severity": 0.253
+  },
+  {
+    "text": "In Elephant and Castle \u2014 cctv cameras everywhere and well lit, feels very comfortable tonight",
+    "category": "safe",
+    "severity": 0.09
+  },
+  {
+    "text": "Cobblestones in poor condition, slippery and uneven underfoot",
+    "category": "road_hazard",
+    "severity": 0.26
+  },
+  {
+    "text": "Road surface is really broken and dangerous here (stay alert)",
+    "category": "road_hazard",
+    "severity": 0.374
+  },
+  {
+    "text": "By Stockwell station \u2014 police patrol walking through regularly, area feels very secure, happened last night",
+    "category": "safe",
+    "severity": 0.054
+  },
+  {
+    "text": "Area seems calm, just the usual late night quietness (near Barking)",
+    "category": "neutral",
+    "severity": 0.177
+  },
+  {
+    "text": "By Dalston station \u2014 just witnessed a stabbing on this street, police are on the way",
+    "category": "crime",
+    "severity": 0.95
+  },
+  {
+    "text": "Men shouting aggressively at passers-by on this street \u2014 quite dangerous",
+    "category": "antisocial",
+    "severity": 0.607
+  },
+  {
+    "text": "Felt intimidated walking past a large group on the corner",
+    "category": "antisocial",
+    "severity": 0.48
+  },
+  {
+    "text": "Saw someone being followed and harassed down this road",
+    "category": "antisocial",
+    "severity": 0.618
+  },
+  {
+    "text": "Person acting erratically and shouting at everyone passing by #BeCareful",
+    "category": "antisocial",
+    "severity": 0.425
+  },
+  {
+    "text": "Car windows smashed and belongings stolen on this street \u2014 at midnight",
+    "category": "crime",
+    "severity": 0.56
+  },
+  {
+    "text": "Dense fog tonight makes it impossible to see ahead safely #TakeExtra Care",
+    "category": "weather",
+    "severity": 0.5
+  },
+  {
+    "text": "Slippery cobblestones in the rain, saw someone fall over, happened an hour ago",
+    "category": "weather",
+    "severity": 0.323
+  },
+  {
+    "text": "Someone got stabbed outside the shop here tonight \u2014 really serious",
+    "category": "crime",
+    "severity": 0.915
+  },
+  {
+    "text": "In Elephant and Castle \u2014 group asking for money very aggressively, would not take no",
+    "category": "antisocial",
+    "severity": 0.567
+  },
+  {
+    "text": "Just now: felt intimidated walking past a large group on the corner",
+    "category": "antisocial",
+    "severity": 0.459
+  },
+  {
+    "text": "By New Cross station \u2014 heavy snow and ice making every step dangerous tonight \u2014 around 2am",
+    "category": "weather",
+    "severity": 0.467
+  },
+  {
+    "text": "Violent thunderstorm with lightning, not safe to be outside",
+    "category": "weather",
+    "severity": 0.529
+  },
+  {
+    "text": "Night market nearby means it is really lively and safe feeling #SafeStreets",
+    "category": "safe",
+    "severity": 0.105
+  },
+  {
+    "text": "Bike theft happened in broad daylight right here (near Woolwich)",
+    "category": "crime",
+    "severity": 0.57
+  },
+  {
+    "text": "Security guard stationed nearby, feel very secure here, happened right now",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Someone verbally abusing strangers outside the shops here",
+    "category": "antisocial",
+    "severity": 0.539
+  },
+  {
+    "text": "Rain is picking up, roads are getting wet and slippery",
+    "category": "weather",
+    "severity": 0.158
+  },
+  {
+    "text": "Police arrested someone aggressively right outside here (near Walthamstow)",
+    "category": "crime",
+    "severity": 0.639
+  },
+  {
+    "text": "Fairly standard walk, nothing notable or worrying to mention #LondonLife",
+    "category": "neutral",
+    "severity": 0.153
+  },
+  {
+    "text": "Drunk group causing trouble and being threatening #BeCareful",
+    "category": "antisocial",
+    "severity": 0.55
+  },
+  {
+    "text": "Graffiti gang marking territory, area feels tense tonight, happened an hour ago (near Canary Wharf)",
+    "category": "antisocial",
+    "severity": 0.397
+  },
+  {
+    "text": "Around Peckham \u2014 large group of men blocking the pavement and being aggressive",
+    "category": "antisocial",
+    "severity": 0.692
+  },
+  {
+    "text": "Saw a pickpocket working the area, be careful with your pockets",
+    "category": "crime",
+    "severity": 0.696
+  },
+  {
+    "text": "Busy road with loads of families and couples out, very safe feeling #AllGood",
+    "category": "safe",
+    "severity": 0.091
+  },
+  {
+    "text": "Police stationed near here tonight, area is very well covered, happened this morning",
+    "category": "safe",
+    "severity": 0.09
+  },
+  {
+    "text": "Walking through Walthamstow \u2014 around 2am: some broken street lights making parts of this road darker than usual",
+    "category": "road_hazard",
+    "severity": 0.331
+  },
+  {
+    "text": "Burglary in progress, police called and on their way \u2014 earlier today (near Camden)",
+    "category": "crime",
+    "severity": 0.776
+  },
+  {
+    "text": "Slippery cobblestones in the rain, saw someone fall over (take care)",
+    "category": "weather",
+    "severity": 0.369
+  },
+  {
+    "text": "Not many people around at this hour but nothing major to worry about #NightWalk",
+    "category": "neutral",
+    "severity": 0.223
+  },
+  {
+    "text": "Pavement is narrow and poorly maintained along this section \u2014 a few minutes ago (near Camden)",
+    "category": "road_hazard",
+    "severity": 0.234
+  },
+  {
+    "text": "Strong gusts knocking people over near the open stretch (near New Cross)",
+    "category": "weather",
+    "severity": 0.398
+  },
+  {
+    "text": "Shooting reported nearby, police have cordoned the area \u2014 this evening (near Bethnal Green)",
+    "category": "crime",
+    "severity": 1.0
+  },
+  {
+    "text": "Violent thunderstorm with lightning, not safe to be outside (stay alert)",
+    "category": "weather",
+    "severity": 0.559
+  },
+  {
+    "text": "Normal level of activity for this time of night, no concerns \u2014 feels fine",
+    "category": "neutral",
+    "severity": 0.232
+  },
+  {
+    "text": "Light snow dusting on the road, a bit icy in places \u2014 a few minutes ago",
+    "category": "weather",
+    "severity": 0.271
+  },
+  {
+    "text": "In Kings Cross \u2014 someone got stabbed outside the shop here tonight",
+    "category": "crime",
+    "severity": 0.946
+  },
+  {
+    "text": "Shooting reported nearby, police presence have cordoned the area (near Peckham)",
+    "category": "crime",
+    "severity": 1.0
+  },
+  {
+    "text": "Gravel path in poor condition makes cycling difficult and risky",
+    "category": "road_hazard",
+    "severity": 0.199
+  },
+  {
+    "text": "Overcast and breezy tonight, nothing serious but take care",
+    "category": "weather",
+    "severity": 0.147
+  },
+  {
+    "text": "Armed robbery at the corner shop, they had a knife \u2014 extremely dangerous",
+    "category": "crime",
+    "severity": 1.0
+  },
+  {
+    "text": "Police tape blocking the road ahead, incident overnight",
+    "category": "crime",
+    "severity": 0.801
+  },
+  {
+    "text": "Passed through without any incident, road seems fine, happened right now",
+    "category": "neutral",
+    "severity": 0.137
+  },
+  {
+    "text": "Near Walthamstow \u2014 witnessed road rage that turned into a physical fight",
+    "category": "crime",
+    "severity": 0.744
+  },
+  {
+    "text": "Bit unlit around here but nothing sketchy going on \u2014 just now",
+    "category": "neutral",
+    "severity": 0.137
+  },
+  {
+    "text": "Thick fog with almost zero visibility walking through here #StaySafe",
+    "category": "weather",
+    "severity": 0.47
+  },
+  {
+    "text": "Busy road with loads of families and couples out, very fine feeling",
+    "category": "safe",
+    "severity": 0.056
+  },
+  {
+    "text": "Felt intimidated walking past a large group on the corner #StaySafe",
+    "category": "antisocial",
+    "severity": 0.481
+  },
+  {
+    "text": "A bit quieter than usual but nothing unusual or alarming #NightWalk",
+    "category": "neutral",
+    "severity": 0.147
+  },
+  {
+    "text": "Someone was very threatening in their behaviour near here #BeCareful",
+    "category": "antisocial",
+    "severity": 0.595
+  },
+  {
+    "text": "Just off Dalston \u2014 several street lights broken making the path very dark \u2014 this evening",
+    "category": "road_hazard",
+    "severity": 0.322
+  },
+  {
+    "text": "Single street lamp flickering, walking feels less safe \u2014 feels fine",
+    "category": "road_hazard",
+    "severity": 0.276
+  },
+  {
+    "text": "This afternoon: someone aggressive was blocking the path and refused to move",
+    "category": "antisocial",
+    "severity": 0.488
+  },
+  {
+    "text": "At midnight: nothing to report here, normal evening on this road (near Canary Wharf)",
+    "category": "neutral",
+    "severity": 0.107
+  },
+  {
+    "text": "This morning: light drizzle making the road surface slightly wet and dangerous",
+    "category": "weather",
+    "severity": 0.229
+  },
+  {
+    "text": "Quiet evening, saw a few people walking their dogs, nothing concerning",
+    "category": "neutral",
+    "severity": 0.097
+  },
+  {
+    "text": "This morning: looks normal here, nothing unusual happening that i can see (near Dalston)",
+    "category": "neutral",
+    "severity": 0.179
+  },
+  {
+    "text": "Police tape blocking the road ahead, incident overnight #BeCareful",
+    "category": "crime",
+    "severity": 0.761
+  },
+  {
+    "text": "Gang of youths intimidating people near the park gates \u2014 this afternoon (near Stockwell)",
+    "category": "antisocial",
+    "severity": 0.696
+  },
+  {
+    "text": "By Shoreditch station \u2014 had my bag snatched while walking here, avoid this route \u2014 this evening",
+    "category": "crime",
+    "severity": 0.787
+  },
+  {
+    "text": "Just passed through, fairly empty but seemed fine \u2014 earlier today (near Clapham)",
+    "category": "neutral",
+    "severity": 0.076
+  },
+  {
+    "text": "Just off Whitechapel \u2014 scaffolding collapsed and is blocking half the pavement dangerously",
+    "category": "road_hazard",
+    "severity": 0.397
+  },
+  {
+    "text": "Puddles everywhere from earlier rain, pavements are wet #StaySafe",
+    "category": "weather",
+    "severity": 0.139
+  },
+  {
+    "text": "Shooting reported nearby, police presence have cordoned the area \u2014 last night",
+    "category": "crime",
+    "severity": 0.961
+  },
+  {
+    "text": "Not many people around at this hour but nothing major to worry about",
+    "category": "neutral",
+    "severity": 0.093
+  },
+  {
+    "text": "Road surface is really broken and dangerous here",
+    "category": "road_hazard",
+    "severity": 0.291
+  },
+  {
+    "text": "Area seems calm, just the usual late night quietness #NightWalk",
+    "category": "neutral",
+    "severity": 0.214
+  },
+  {
+    "text": "Walking through Whitechapel \u2014 walking through now, seems pretty quiet tonight, nothing to report \u2014 this evening",
+    "category": "neutral",
+    "severity": 0.091
+  },
+  {
+    "text": "This road is always busy and well lit, never had any issues here",
+    "category": "safe",
+    "severity": 0.024
+  },
+  {
+    "text": "Last night: drug dealing openly happening in the alley nearby",
+    "category": "crime",
+    "severity": 0.544
+  },
+  {
+    "text": "Saw some people sitting outside but nothing threatening",
+    "category": "neutral",
+    "severity": 0.138
+  },
+  {
+    "text": "Around Stockwell \u2014 a woman was violently assaulted near the bus stop just now",
+    "category": "crime",
+    "severity": 0.924
+  },
+  {
+    "text": "Thick fog with almost zero visibility walking through here \u2014 this afternoon",
+    "category": "weather",
+    "severity": 0.513
+  },
+  {
+    "text": "Fairly standard walk, nothing notable or worrying to mention \u2014 this evening",
+    "category": "neutral",
+    "severity": 0.142
+  },
+  {
+    "text": "Council has improved the lighting here recently, much safer now (near Soho)",
+    "category": "safe",
+    "severity": 0.037
+  },
+  {
+    "text": "Pavement completely broken and dangerous to walk on at night",
+    "category": "road_hazard",
+    "severity": 0.376
+  },
+  {
+    "text": "Light drizzle making the road surface slightly wet and dangerous (near Peckham)",
+    "category": "weather",
+    "severity": 0.185
+  },
+  {
+    "text": "Wind so strong umbrellas are useless and vision is affected \u2014 last night",
+    "category": "weather",
+    "severity": 0.455
+  },
+  {
+    "text": "Around Walthamstow \u2014 street lights are all out on this road, completely unlit \u2014 this evening",
+    "category": "road_hazard",
+    "severity": 0.484
+  },
+  {
+    "text": "Person acting erratically and shouting at everyone passing by (near Shoreditch)",
+    "category": "antisocial",
+    "severity": 0.522
+  },
+  {
+    "text": "Some broken street lights making parts of this road darker than usual",
+    "category": "road_hazard",
+    "severity": 0.349
+  },
+  {
+    "text": "Just now: person acting erratically and shouting at everyone passing by",
+    "category": "antisocial",
+    "severity": 0.483
+  },
+  {
+    "text": "Someone aggressive was blocking the path and refused to move",
+    "category": "antisocial",
+    "severity": 0.501
+  },
+  {
+    "text": "Well maintained area with good lighting, felt very comfortable \u2014 no worries",
+    "category": "safe",
+    "severity": 0.017
+  },
+  {
+    "text": "Someone got knifed outside the shop here tonight",
+    "category": "crime",
+    "severity": 0.899
+  },
+  {
+    "text": "Just off Camden \u2014 drug dealing openly happening in the alley nearby \u2014 tonight",
+    "category": "crime",
+    "severity": 0.617
+  },
+  {
+    "text": "Lots of people around, great atmosphere, felt very comfortable here",
+    "category": "safe",
+    "severity": 0.105
+  },
+  {
+    "text": "Council has improved the lighting here recently, much safer now #SafeStreets",
+    "category": "safe",
+    "severity": 0.063
+  },
+  {
+    "text": "By Shoreditch station \u2014 rain is picking up, roads are getting wet and slippery",
+    "category": "weather",
+    "severity": 0.284
+  },
+  {
+    "text": "Tonight: got mugged at knifepoint walking through here tonight",
+    "category": "crime",
+    "severity": 0.964
+  },
+  {
+    "text": "Large group of men blocking the pavement and being aggressive, happened a few minutes ago",
+    "category": "antisocial",
+    "severity": 0.678
+  },
+  {
+    "text": "Icy conditions making it really dangerous to walk here tonight",
+    "category": "weather",
+    "severity": 0.405
+  },
+  {
+    "text": "Group of men made comments and followed me briefly, stay aware \u2014 this evening",
+    "category": "antisocial",
+    "severity": 0.564
+  },
+  {
+    "text": "Police arrested someone aggressively right outside here",
+    "category": "crime",
+    "severity": 0.619
+  },
+  {
+    "text": "Bit dark around here but nothing sketchy going on \u2014 just now",
+    "category": "neutral",
+    "severity": 0.272
+  },
+  {
+    "text": "Police stationed near here tonight, area is very well covered (near Dalston)",
+    "category": "safe",
+    "severity": 0.082
+  },
+  {
+    "text": "Knife pulled on a pedestrian outside here (near Lewisham)",
+    "category": "crime",
+    "severity": 0.94
+  },
+  {
+    "text": "Walking through Stockwell \u2014 light snow dusting on the road, a bit slippery in places",
+    "category": "weather",
+    "severity": 0.192
+  },
+  {
+    "text": "Right now: overgrown bushes blocking the path and reducing visibility here",
+    "category": "road_hazard",
+    "severity": 0.27
+  },
+  {
+    "text": "A few minutes ago: rain is picking up, roads are getting wet and slippery",
+    "category": "weather",
+    "severity": 0.22
+  },
+  {
+    "text": "Few people about, no obvious safety issues I could see \u2014 this afternoon",
+    "category": "neutral",
+    "severity": 0.111
+  },
+  {
+    "text": "Police stationed near here tonight, area is very well covered",
+    "category": "safe",
+    "severity": 0.063
+  },
+  {
+    "text": "Walked here late and felt perfectly safe, good lighting and people around \u2014 no worries",
+    "category": "safe",
+    "severity": 0.038
+  },
+  {
+    "text": "Just passed through, fairly empty but seemed fine \u2014 feels fine",
+    "category": "neutral",
+    "severity": 0.122
+  },
+  {
+    "text": "In Lewisham \u2014 light snow dusting on the road, a bit icy in places",
+    "category": "weather",
+    "severity": 0.271
+  },
+  {
+    "text": "Just off Stratford \u2014 loads of pubs and restaurants with people outside, very lively and fine",
+    "category": "safe",
+    "severity": 0.138
+  },
+  {
+    "text": "Just off Brixton \u2014 nothing to report here, normal evening on this road",
+    "category": "neutral",
+    "severity": 0.133
+  },
+  {
+    "text": "By Hoxton station \u2014 youths throwing things at cars and pedestrians on this road",
+    "category": "antisocial",
+    "severity": 0.569
+  },
+  {
+    "text": "Dense fog tonight makes it impossible to see ahead safely (near Brixton)",
+    "category": "weather",
+    "severity": 0.508
+  },
+  {
+    "text": "Night market nearby means it is really lively and safe feeling, happened this evening (near Tottenham)",
+    "category": "safe",
+    "severity": 0.135
+  },
+  {
+    "text": "Looks normal here, nothing unusual happening that I can see (near Kings Cross)",
+    "category": "neutral",
+    "severity": 0.065
+  },
+  {
+    "text": "Overcast and breezy tonight, nothing serious but take care \u2014 feels fine",
+    "category": "weather",
+    "severity": 0.12
+  },
+  {
+    "text": "Around Canary Wharf \u2014 had my bag snatched while walking here, avoid this route",
+    "category": "crime",
+    "severity": 0.777
+  },
+  {
+    "text": "Always feel safe walking this route, lots of CCTV and foot traffic #LondonLife",
+    "category": "safe",
+    "severity": 0.023
+  },
+  {
+    "text": "This whole stretch has no street lighting at all, pitch black (near Shoreditch)",
+    "category": "road_hazard",
+    "severity": 0.464
+  },
+  {
+    "text": "In Kings Cross \u2014 drunk group causing trouble and being threatening",
+    "category": "antisocial",
+    "severity": 0.529
+  },
+  {
+    "text": "Huge broken tarmac in the middle of the road that came out of nowhere (near New Cross)",
+    "category": "road_hazard",
+    "severity": 0.331
+  },
+  {
+    "text": "A woman was violently assaulted near the bus stop just now \u2014 earlier today (near Walthamstow)",
+    "category": "crime",
+    "severity": 0.865
+  },
+  {
+    "text": "Someone followed me down this road for several minutes, very scary (near Hoxton)",
+    "category": "antisocial",
+    "severity": 0.645
+  },
+  {
+    "text": "Water main burst making the road impassable and slippery",
+    "category": "road_hazard",
+    "severity": 0.458
+  },
+  {
+    "text": "Group asking for money very aggressively, would not take no \u2014 earlier today (near Islington)",
+    "category": "antisocial",
+    "severity": 0.568
+  },
+  {
+    "text": "Police arrested someone aggressively right outside here \u2014 pretty concerning",
+    "category": "crime",
+    "severity": 0.656
+  },
+  {
+    "text": "Heavy rain and poor drainage flooding the underpass (be aware)",
+    "category": "weather",
+    "severity": 0.305
+  },
+  {
+    "text": "Bit foggy tonight but mostly fine if you go slowly",
+    "category": "weather",
+    "severity": 0.191
+  },
+  {
+    "text": "Busy high street with lots of shops open late, very safe vibe \u2014 no worries",
+    "category": "safe",
+    "severity": 0.06
+  },
+  {
+    "text": "Wind so strong umbrellas are useless and vision is affected (stay alert)",
+    "category": "weather",
+    "severity": 0.388
+  },
+  {
+    "text": "Heavy snow and ice making every step dangerous tonight",
+    "category": "weather",
+    "severity": 0.545
+  },
+  {
+    "text": "Lovely community feel around here, people are friendly and area is safe",
+    "category": "safe",
+    "severity": 0.017
+  },
+  {
+    "text": "Families and dog walkers everywhere, completely safe atmosphere \u2014 all good",
+    "category": "safe",
+    "severity": 0.098
+  },
+  {
+    "text": "Lovely community feel around here, people are friendly and area is safe #LondonLife",
+    "category": "safe",
+    "severity": 0.038
+  },
+  {
+    "text": "Flooding on the road making it impassable and dangerous #StaySafe",
+    "category": "weather",
+    "severity": 0.562
+  },
+  {
+    "text": "Security guard stationed nearby, feel very safe here, happened around 2am",
+    "category": "safe",
+    "severity": 0.063
+  },
+  {
+    "text": "Gang of youths intimidating people near the park gates (near New Cross)",
+    "category": "antisocial",
+    "severity": 0.727
+  },
+  {
+    "text": "Flooding on the road making it impassable and dangerous",
+    "category": "weather",
+    "severity": 0.551
+  },
+  {
+    "text": "Gas leak reported on this road, area has been cordoned off (stay alert)",
+    "category": "road_hazard",
+    "severity": 0.496
+  },
+  {
+    "text": "Group asking for money very aggressively, would not take no (take care)",
+    "category": "antisocial",
+    "severity": 0.583
+  },
+  {
+    "text": "Violent thunderstorm with lightning, not safe to be outside (near New Cross)",
+    "category": "weather",
+    "severity": 0.457
+  },
+  {
+    "text": "Bit unlit around here but nothing sketchy going on (near Croydon)",
+    "category": "neutral",
+    "severity": 0.236
+  },
+  {
+    "text": "Heard loud fight nearby, sounds like someone got hurt \u2014 quite dangerous",
+    "category": "crime",
+    "severity": 0.68
+  },
+  {
+    "text": "Few people around but the atmosphere seems calm enough #NightWalk",
+    "category": "neutral",
+    "severity": 0.134
+  },
+  {
+    "text": "By Brixton station \u2014 earlier today: roads flooded and pavement submerged, take another route",
+    "category": "weather",
+    "severity": 0.465
+  },
+  {
+    "text": "Walking through Stratford \u2014 this whole stretch has no street lighting at all, pitch black, happened just now",
+    "category": "road_hazard",
+    "severity": 0.5
+  },
+  {
+    "text": "Pretty deserted but nothing to suggest danger \u2014 no worries",
+    "category": "neutral",
+    "severity": 0.203
+  },
+  {
+    "text": "Around 2am: well-lit road with constant foot traffic, never felt unsafe here",
+    "category": "safe",
+    "severity": 0.031
+  },
+  {
+    "text": "Roads flooded and pavement submerged, take another route (near Canary Wharf)",
+    "category": "weather",
+    "severity": 0.532
+  },
+  {
+    "text": "Bit foggy tonight but mostly fine if you go slowly, happened this morning (near Dalston)",
+    "category": "weather",
+    "severity": 0.274
+  },
+  {
+    "text": "Normal level of activity for this time of night, no concerns \u2014 an hour ago",
+    "category": "neutral",
+    "severity": 0.126
+  },
+  {
+    "text": "This afternoon: dense fog tonight makes it impossible to see ahead safely",
+    "category": "weather",
+    "severity": 0.525
+  },
+  {
+    "text": "Around Kings Cross \u2014 heard loud fight nearby, sounds like someone got hurt, happened just now",
+    "category": "crime",
+    "severity": 0.717
+  },
+  {
+    "text": "Loads of pubs and restaurants with people outside, very lively and safe \u2014 this morning",
+    "category": "safe",
+    "severity": 0.08
+  },
+  {
+    "text": "Huge pothole in the middle of the road that came out of nowhere \u2014 earlier today",
+    "category": "road_hazard",
+    "severity": 0.38
+  },
+  {
+    "text": "Pretty deserted but nothing to suggest danger #LondonLife",
+    "category": "neutral",
+    "severity": 0.214
+  },
+  {
+    "text": "Underpass has zero lighting tonight, very uncomfortable to walk through, happened a few minutes ago (near New Cross)",
+    "category": "road_hazard",
+    "severity": 0.457
+  },
+  {
+    "text": "Walked here late and felt perfectly safe, good lighting and people around #LondonLife",
+    "category": "safe",
+    "severity": 0.049
+  },
+  {
+    "text": "Group of men made comments and followed me briefly, stay aware #StaySafe",
+    "category": "antisocial",
+    "severity": 0.593
+  },
+  {
+    "text": "Just passed through, fairly empty but seemed fine",
+    "category": "neutral",
+    "severity": 0.169
+  },
+  {
+    "text": "Security guard stationed nearby, feel very safe here (near Camden)",
+    "category": "safe",
+    "severity": 0.052
+  },
+  {
+    "text": "Walking through Islington \u2014 road surface is really broken and dangerous here, happened around 2am",
+    "category": "road_hazard",
+    "severity": 0.38
+  },
+  {
+    "text": "Security guard stationed nearby, feel very secure here",
+    "category": "safe",
+    "severity": 0.053
+  },
+  {
+    "text": "Light snow dusting on the road, a bit slippery in places \u2014 all good",
+    "category": "weather",
+    "severity": 0.287
+  },
+  {
+    "text": "Graffiti gang marking territory, area feels tense tonight",
+    "category": "antisocial",
+    "severity": 0.37
+  },
+  {
+    "text": "Very misty tonight, reduced visibility but still walkable \u2014 no worries",
+    "category": "weather",
+    "severity": 0.233
+  },
+  {
+    "text": "Around Barking \u2014 large group of men blocking the pavement and being aggressive, happened this evening",
+    "category": "antisocial",
+    "severity": 0.676
+  },
+  {
+    "text": "Near Bethnal Green \u2014 just got mugged, they stole my phone and wallet \u2014 tonight",
+    "category": "crime",
+    "severity": 0.895
+  },
+  {
+    "text": "Mugging happened to my friend near this spot last week, happened earlier today",
+    "category": "crime",
+    "severity": 0.802
+  },
+  {
+    "text": "Underpass has zero lighting tonight, very uncomfortable to walk through",
+    "category": "road_hazard",
+    "severity": 0.373
+  },
+  {
+    "text": "Walked here late and felt perfectly safe, good lighting and people around \u2014 just now",
+    "category": "safe",
+    "severity": 0.063
+  },
+  {
+    "text": "Saw someone being followed and harassed down this road #LondonStreets",
+    "category": "antisocial",
+    "severity": 0.621
+  },
+  {
+    "text": "Two men arguing and pushing each other outside the pub here #LondonStreets",
+    "category": "antisocial",
+    "severity": 0.471
+  },
+  {
+    "text": "Someone just threatened me with a bottle, get out of here (near Whitechapel)",
+    "category": "crime",
+    "severity": 0.842
+  },
+  {
+    "text": "Well-lit road with constant foot traffic, never felt unsafe here, happened earlier today (near Walthamstow)",
+    "category": "safe",
+    "severity": 0.011
+  },
+  {
+    "text": "Passed through without any incident, road seems fine #LondonLife",
+    "category": "neutral",
+    "severity": 0.118
+  },
+  {
+    "text": "Area seems calm, just the usual late night quietness",
+    "category": "neutral",
+    "severity": 0.189
+  },
+  {
+    "text": "Pavement is narrow and poorly maintained along this section #LondonRoads",
+    "category": "road_hazard",
+    "severity": 0.187
+  },
+  {
+    "text": "By Hackney station \u2014 around 2am: lots of people around, great atmosphere, felt very comfortable here",
+    "category": "safe",
+    "severity": 0.022
+  },
+  {
+    "text": "Youths throwing things at cars and pedestrians on this road \u2014 just now",
+    "category": "antisocial",
+    "severity": 0.595
+  },
+  {
+    "text": "Works have removed the pavement leaving only a narrow muddy strip #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.301
+  },
+  {
+    "text": "Saw a pickpocket working the area, be careful with your pockets #StaySafe",
+    "category": "crime",
+    "severity": 0.707
+  },
+  {
+    "text": "Light drizzle making the road surface slightly slippery, happened just now (near Stratford)",
+    "category": "weather",
+    "severity": 0.183
+  },
+  {
+    "text": "Walking through Bethnal Green \u2014 just now: puddles everywhere from earlier rain, pavements are wet",
+    "category": "weather",
+    "severity": 0.171
+  },
+  {
+    "text": "Repeated verbal abuse from someone outside the station here (near Brixton)",
+    "category": "antisocial",
+    "severity": 0.573
+  },
+  {
+    "text": "It is pretty empty here tonight but I felt okay walking through \u2014 all good",
+    "category": "neutral",
+    "severity": 0.156
+  },
+  {
+    "text": "Light drizzle making the road surface slightly wet and dangerous",
+    "category": "weather",
+    "severity": 0.168
+  },
+  {
+    "text": "Violent thunderstorm with lightning, not safe to be outside #LondonWeather",
+    "category": "weather",
+    "severity": 0.433
+  },
+  {
+    "text": "Well-lit road with constant foot traffic, never felt unsafe here",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Just walked this route alone and felt completely fine, recommend it #LondonLife",
+    "category": "safe",
+    "severity": 0.031
+  },
+  {
+    "text": "Bit unlit around here but nothing sketchy going on",
+    "category": "neutral",
+    "severity": 0.245
+  },
+  {
+    "text": "Works have removed the pavement leaving only a narrow muddy strip",
+    "category": "road_hazard",
+    "severity": 0.285
+  },
+  {
+    "text": "Nothing to report here, normal evening on this road",
+    "category": "neutral",
+    "severity": 0.027
+  },
+  {
+    "text": "Attempted robbery on this road, victim managed to escape \u2014 quite dangerous",
+    "category": "crime",
+    "severity": 0.776
+  },
+  {
+    "text": "A woman was violently assaulted near the bus stop just now, happened a few minutes ago",
+    "category": "crime",
+    "severity": 0.962
+  },
+  {
+    "text": "Drug dealing openly happening in the alley nearby",
+    "category": "crime",
+    "severity": 0.613
+  },
+  {
+    "text": "Overcast and breezy tonight, nothing serious but take care, happened this evening (near Kings Cross)",
+    "category": "weather",
+    "severity": 0.088
+  },
+  {
+    "text": "An hour ago: some broken street lights making parts of this road darker than usual",
+    "category": "road_hazard",
+    "severity": 0.282
+  },
+  {
+    "text": "On Dalston road \u2014 works have removed the pavement leaving only a narrow muddy strip",
+    "category": "road_hazard",
+    "severity": 0.317
+  },
+  {
+    "text": "Works have removed the pavement leaving only a narrow muddy strip, happened last night (near Lewisham)",
+    "category": "road_hazard",
+    "severity": 0.259
+  },
+  {
+    "text": "No lighting and the path is completely dark and isolated",
+    "category": "road_hazard",
+    "severity": 0.398
+  },
+  {
+    "text": "Very misty tonight, reduced visibility but still walkable",
+    "category": "weather",
+    "severity": 0.283
+  },
+  {
+    "text": "Around 2am: felt really threatened by a group hanging around the corner",
+    "category": "antisocial",
+    "severity": 0.59
+  },
+  {
+    "text": "Attempted robbery on this road, victim managed to escape, happened earlier today",
+    "category": "crime",
+    "severity": 0.786
+  },
+  {
+    "text": "Heard loud fight nearby, sounds like someone got hurt",
+    "category": "crime",
+    "severity": 0.728
+  },
+  {
+    "text": "Car windows smashed and belongings stolen on this street #BeCareful",
+    "category": "crime",
+    "severity": 0.583
+  },
+  {
+    "text": "People clearly on drugs behaving erratically near here",
+    "category": "antisocial",
+    "severity": 0.393
+  },
+  {
+    "text": "Icy conditions making it really dangerous to walk here tonight #LondonWeather",
+    "category": "weather",
+    "severity": 0.419
+  },
+  {
+    "text": "Street lights are all out on this road, completely unlit, happened right now",
+    "category": "road_hazard",
+    "severity": 0.448
+  },
+  {
+    "text": "Black ice on the pavements here, very dangerous to walk",
+    "category": "weather",
+    "severity": 0.63
+  },
+  {
+    "text": "Just witnessed a stabbing on this street, police are on the way \u2014 really serious",
+    "category": "crime",
+    "severity": 1.0
+  },
+  {
+    "text": "Bike theft happened in broad daylight right here",
+    "category": "crime",
+    "severity": 0.561
+  },
+  {
+    "text": "On Soho road \u2014 an hour ago: few people around but the atmosphere seems calm enough",
+    "category": "neutral",
+    "severity": 0.214
+  },
+  {
+    "text": "Heavy rain and poor drainage flooding the underpass",
+    "category": "weather",
+    "severity": 0.406
+  },
+  {
+    "text": "On Lewisham road \u2014 around 2am: flooding on the road making it impassable and dangerous",
+    "category": "weather",
+    "severity": 0.499
+  },
+  {
+    "text": "Used this route regularly at night, always fine and well lit \u2014 earlier today",
+    "category": "safe",
+    "severity": 0.07
+  },
+  {
+    "text": "Walked here late and felt perfectly safe, good lighting and people around (near Canary Wharf)",
+    "category": "safe",
+    "severity": 0.063
+  },
+  {
+    "text": "Families and dog walkers everywhere, completely no issues atmosphere, happened around 2am",
+    "category": "safe",
+    "severity": 0.062
+  },
+  {
+    "text": "Near Barking \u2014 this road is always busy and well lit, never had any issues here \u2014 this afternoon",
+    "category": "safe",
+    "severity": 0.099
+  },
+  {
+    "text": "This evening: police tape blocking the road ahead, incident overnight (near Walthamstow)",
+    "category": "crime",
+    "severity": 0.718
+  },
+  {
+    "text": "Two men arguing and pushing each other outside the pub here (take care)",
+    "category": "antisocial",
+    "severity": 0.404
+  },
+  {
+    "text": "Looks normal here, nothing unusual happening that I can see, happened an hour ago",
+    "category": "neutral",
+    "severity": 0.123
+  },
+  {
+    "text": "Phone grabbed from my hand by someone on a moped",
+    "category": "crime",
+    "severity": 0.844
+  },
+  {
+    "text": "Group of men made comments and followed me briefly, stay aware",
+    "category": "antisocial",
+    "severity": 0.505
+  },
+  {
+    "text": "Repeated verbal abuse from someone outside the station here #StaySafe",
+    "category": "antisocial",
+    "severity": 0.49
+  },
+  {
+    "text": "CCTV cameras everywhere and well lit, feels very safe tonight, happened earlier today",
+    "category": "safe",
+    "severity": 0.043
+  },
+  {
+    "text": "Attempted robbery on this road, victim managed to escape",
+    "category": "crime",
+    "severity": 0.768
+  },
+  {
+    "text": "Rain has washed debris onto the road making it dangerous \u2014 last night",
+    "category": "weather",
+    "severity": 0.342
+  },
+  {
+    "text": "Busy road with loads of families and couples out, very safe feeling (near Tottenham)",
+    "category": "safe",
+    "severity": 0.034
+  },
+  {
+    "text": "On Barking road \u2014 felt really threatened by a group hanging around the corner",
+    "category": "antisocial",
+    "severity": 0.664
+  },
+  {
+    "text": "Around Bethnal Green \u2014 very misty tonight, reduced visibility but still walkable",
+    "category": "weather",
+    "severity": 0.224
+  },
+  {
+    "text": "Wind so strong umbrellas are useless and vision is affected, happened last night (near Camden)",
+    "category": "weather",
+    "severity": 0.308
+  },
+  {
+    "text": "Water main burst making the road impassable and icy, happened around 2am",
+    "category": "road_hazard",
+    "severity": 0.392
+  },
+  {
+    "text": "Near Elephant and Castle \u2014 icy conditions making it really dangerous to walk here tonight",
+    "category": "weather",
+    "severity": 0.518
+  },
+  {
+    "text": "Sketchy group of people hanging around the underpass, happened last night",
+    "category": "antisocial",
+    "severity": 0.466
+  },
+  {
+    "text": "Not a lot going on here, uneventful walk through",
+    "category": "neutral",
+    "severity": 0.145
+  },
+  {
+    "text": "No lighting and the path is completely dark and isolated \u2014 earlier today",
+    "category": "road_hazard",
+    "severity": 0.38
+  },
+  {
+    "text": "By Whitechapel station \u2014 people clearly on drugs behaving erratically near here \u2014 a few minutes ago",
+    "category": "antisocial",
+    "severity": 0.433
+  },
+  {
+    "text": "Loads of pubs and restaurants with people outside, very lively and fine",
+    "category": "safe",
+    "severity": 0.083
+  },
+  {
+    "text": "Saw a man get jumped by a gang and beaten up",
+    "category": "crime",
+    "severity": 0.964
+  },
+  {
+    "text": "By Kings Cross station \u2014 heavy snow and ice making every step dangerous tonight",
+    "category": "weather",
+    "severity": 0.551
+  },
+  {
+    "text": "Quiet evening, saw a few people walking their dogs, nothing concerning (near Tottenham)",
+    "category": "neutral",
+    "severity": 0.203
+  },
+  {
+    "text": "Around Barking \u2014 just walked this route alone and felt completely fine, recommend it, happened this afternoon",
+    "category": "safe",
+    "severity": 0.081
+  },
+  {
+    "text": "Night market nearby means it is really lively and safe feeling \u2014 feels fine",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Walking through Hackney \u2014 lovely community feel around here, people are friendly and area is safe",
+    "category": "safe",
+    "severity": 0.01
+  },
+  {
+    "text": "In Barking \u2014 strong gusts knocking people over near the open stretch, happened at midnight",
+    "category": "weather",
+    "severity": 0.407
+  },
+  {
+    "text": "Phone grabbed from my hand by someone on a moped \u2014 this evening",
+    "category": "crime",
+    "severity": 0.911
+  },
+  {
+    "text": "Someone was very threatening in their behaviour near here",
+    "category": "antisocial",
+    "severity": 0.693
+  },
+  {
+    "text": "This whole stretch has no street lighting at all, pitch black",
+    "category": "road_hazard",
+    "severity": 0.485
+  },
+  {
+    "text": "Car windows smashed and belongings stolen on this street (near Whitechapel)",
+    "category": "crime",
+    "severity": 0.685
+  },
+  {
+    "text": "At midnight: shooting reported nearby, police have cordoned the area",
+    "category": "crime",
+    "severity": 1.0
+  },
+  {
+    "text": "Near Brixton \u2014 this morning: thick fog with almost zero visibility walking through here",
+    "category": "weather",
+    "severity": 0.482
+  },
+  {
+    "text": "Loose paving slabs that wobble and could cause a fall \u2014 just now",
+    "category": "road_hazard",
+    "severity": 0.247
+  },
+  {
+    "text": "Quiet evening, saw a few people walking their dogs, nothing concerning #NightWalk",
+    "category": "neutral",
+    "severity": 0.146
+  },
+  {
+    "text": "Nothing happening here that I noticed, seemed pretty ordinary #NightWalk",
+    "category": "neutral",
+    "severity": 0.142
+  },
+  {
+    "text": "Light drizzle making the road surface slightly slippery",
+    "category": "weather",
+    "severity": 0.229
+  },
+  {
+    "text": "Not many people around at this hour but nothing major to worry about \u2014 all good",
+    "category": "neutral",
+    "severity": 0.26
+  },
+  {
+    "text": "Cobblestones in poor condition, slippery and uneven underfoot (near Stockwell)",
+    "category": "road_hazard",
+    "severity": 0.207
+  },
+  {
+    "text": "Around 2am: council has improved the lighting here recently, much safer now (near New Cross)",
+    "category": "safe",
+    "severity": 0.036
+  },
+  {
+    "text": "Light drizzle making the road surface slightly slippery \u2014 all good",
+    "category": "weather",
+    "severity": 0.2
+  },
+  {
+    "text": "Right now: walking through now, seems pretty quiet tonight, nothing to report",
+    "category": "neutral",
+    "severity": 0.133
+  },
+  {
+    "text": "Nothing to report here, normal evening on this road #NightWalk",
+    "category": "neutral",
+    "severity": 0.143
+  },
+  {
+    "text": "Walked past without any issues, nothing out of the ordinary (near Stratford)",
+    "category": "neutral",
+    "severity": 0.116
+  },
+  {
+    "text": "Witnessed road rage that turned into a physical fight \u2014 quite dangerous",
+    "category": "crime",
+    "severity": 0.79
+  },
+  {
+    "text": "Saw someone being followed and harassed down this road, happened around 2am (near Lewisham)",
+    "category": "antisocial",
+    "severity": 0.61
+  },
+  {
+    "text": "On Stockwell road \u2014 phone grabbed from my hand by someone on a moped, happened this evening",
+    "category": "crime",
+    "severity": 0.746
+  },
+  {
+    "text": "Bit foggy tonight but mostly fine if you go slowly #TakeExtra Care",
+    "category": "weather",
+    "severity": 0.228
+  },
+  {
+    "text": "Mugging happened to my friend near this spot last week",
+    "category": "crime",
+    "severity": 0.893
+  },
+  {
+    "text": "In Shoreditch \u2014 at midnight: busy road with loads of families and couples out, very safe feeling",
+    "category": "safe",
+    "severity": 0.04
+  },
+  {
+    "text": "Someone verbally abusing strangers outside the shops here #StaySafe",
+    "category": "antisocial",
+    "severity": 0.481
+  },
+  {
+    "text": "Near Canary Wharf \u2014 normal level of activity for this time of night, no concerns \u2014 this morning",
+    "category": "neutral",
+    "severity": 0.136
+  },
+  {
+    "text": "By Lewisham station \u2014 flooding on the road making it impassable and dangerous",
+    "category": "weather",
+    "severity": 0.52
+  },
+  {
+    "text": "Few people around but the atmosphere seems calm enough \u2014 all good",
+    "category": "neutral",
+    "severity": 0.127
+  },
+  {
+    "text": "Last night: saw a man get jumped by a gang and beaten up (near Dalston)",
+    "category": "crime",
+    "severity": 0.878
+  },
+  {
+    "text": "Near Stockwell \u2014 families and dog walkers everywhere, completely safe atmosphere \u2014 at midnight",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Really lovely evening walk, felt completely safe the whole way \u2014 this afternoon (near Shoreditch)",
+    "category": "safe",
+    "severity": 0.02
+  },
+  {
+    "text": "Cobblestones in poor condition, slippery and uneven underfoot \u2014 no worries",
+    "category": "road_hazard",
+    "severity": 0.202
+  },
+  {
+    "text": "Graffiti gang marking territory, area feels tense tonight (take care)",
+    "category": "antisocial",
+    "severity": 0.41
+  },
+  {
+    "text": "Walking through Stratford \u2014 around 2am: area seems calm, just the usual late night quietness",
+    "category": "neutral",
+    "severity": 0.228
+  },
+  {
+    "text": "Area seems calm, just the usual late night quietness, happened just now",
+    "category": "neutral",
+    "severity": 0.215
+  },
+  {
+    "text": "Got mugged at knifepoint walking through here tonight \u2014 extremely dangerous",
+    "category": "crime",
+    "severity": 0.895
+  },
+  {
+    "text": "People clearly on drugs behaving erratically near here (near Hackney)",
+    "category": "antisocial",
+    "severity": 0.462
+  },
+  {
+    "text": "Gas leak reported on this road, area has been cordoned off",
+    "category": "road_hazard",
+    "severity": 0.458
+  },
+  {
+    "text": "Really lovely evening walk, felt completely comfortable the whole way (near Brixton)",
+    "category": "safe",
+    "severity": 0.133
+  },
+  {
+    "text": "Security guard stationed nearby, feel very safe here #LondonLife",
+    "category": "safe",
+    "severity": 0.038
+  },
+  {
+    "text": "Last night: drunk group causing trouble and being threatening (near Walthamstow)",
+    "category": "antisocial",
+    "severity": 0.577
+  },
+  {
+    "text": "Just off Camden \u2014 pretty deserted but nothing to suggest danger \u2014 at midnight",
+    "category": "neutral",
+    "severity": 0.17
+  },
+  {
+    "text": "Got held up at knifepoint walking through here tonight",
+    "category": "crime",
+    "severity": 0.889
+  },
+  {
+    "text": "Debris on the road from last night's works, watch your step",
+    "category": "road_hazard",
+    "severity": 0.191
+  },
+  {
+    "text": "Bike theft happened in broad daylight right here (be aware)",
+    "category": "crime",
+    "severity": 0.609
+  },
+  {
+    "text": "Really lovely evening walk, felt completely safe the whole way #AllGood",
+    "category": "safe",
+    "severity": 0.07
+  },
+  {
+    "text": "Roads flooded and pavement submerged, take another route",
+    "category": "weather",
+    "severity": 0.465
+  },
+  {
+    "text": "Walked here late and felt perfectly safe, good lighting and people around, happened just now (near Canary Wharf)",
+    "category": "safe",
+    "severity": 0.109
+  },
+  {
+    "text": "Just off Shoreditch \u2014 very misty tonight, reduced visibility but still walkable, happened around 2am",
+    "category": "weather",
+    "severity": 0.253
+  },
+  {
+    "text": "Few people about, no obvious safety issues I could see #NightWalk",
+    "category": "neutral",
+    "severity": 0.147
+  },
+  {
+    "text": "Around Lewisham \u2014 last night: saw a pickpocket working the area, be careful with your pockets",
+    "category": "crime",
+    "severity": 0.629
+  },
+  {
+    "text": "Gang of youths intimidating people near the park gates",
+    "category": "antisocial",
+    "severity": 0.686
+  },
+  {
+    "text": "Busy high street with lots of shops open late, very secure vibe, happened last night",
+    "category": "safe",
+    "severity": 0.051
+  },
+  {
+    "text": "Walking through Clapham \u2014 fairly standard walk, nothing notable or worrying to mention",
+    "category": "neutral",
+    "severity": 0.188
+  },
+  {
+    "text": "In Tottenham \u2014 loads of pubs and restaurants with people outside, very lively and safe, happened at midnight",
+    "category": "safe",
+    "severity": 0.137
+  },
+  {
+    "text": "Shooting reported nearby, police have cordoned the area #CrimeAlert",
+    "category": "crime",
+    "severity": 0.926
+  },
+  {
+    "text": "Gas leak reported on this road, area has been cordoned off (near Brixton)",
+    "category": "road_hazard",
+    "severity": 0.441
+  },
+  {
+    "text": "Near Camden \u2014 water main burst making the road impassable and icy",
+    "category": "road_hazard",
+    "severity": 0.417
+  },
+  {
+    "text": "Wind so strong umbrellas are useless and vision is affected #LondonWeather",
+    "category": "weather",
+    "severity": 0.379
+  },
+  {
+    "text": "This morning: pretty deserted but nothing to suggest danger",
+    "category": "neutral",
+    "severity": 0.213
+  },
+  {
+    "text": "Near Kings Cross \u2014 not a lot going on here, uneventful walk through",
+    "category": "neutral",
+    "severity": 0.03
+  },
+  {
+    "text": "Bike theft happened in broad daylight right here, happened tonight",
+    "category": "crime",
+    "severity": 0.575
+  },
+  {
+    "text": "A few minutes ago: saw a man get jumped by a gang and beaten up",
+    "category": "crime",
+    "severity": 0.919
+  },
+  {
+    "text": "Around 2am: this road is always busy and well lit, never had any issues here",
+    "category": "safe",
+    "severity": 0.058
+  },
+  {
+    "text": "Families and dog walkers everywhere, completely safe atmosphere",
+    "category": "safe",
+    "severity": 0.148
+  },
+  {
+    "text": "In Stratford \u2014 saw a pickpocket working the area, be careful with your pockets",
+    "category": "crime",
+    "severity": 0.701
+  },
+  {
+    "text": "Used this route regularly at night, always fine and well lit \u2014 no worries",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Saw someone being followed and harassed down this road \u2014 pretty concerning",
+    "category": "antisocial",
+    "severity": 0.63
+  },
+  {
+    "text": "Sketchy group of people hanging around the underpass",
+    "category": "antisocial",
+    "severity": 0.514
+  },
+  {
+    "text": "Near Kings Cross \u2014 busy high street with lots of shops open late, very safe vibe",
+    "category": "safe",
+    "severity": 0.104
+  },
+  {
+    "text": "By Islington station \u2014 youths throwing things at cars and pedestrians on this road \u2014 an hour ago",
+    "category": "antisocial",
+    "severity": 0.667
+  },
+  {
+    "text": "Really lovely evening walk, felt completely safe the whole way \u2014 no worries",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Huge pothole in the middle of the road that came out of nowhere (stay alert)",
+    "category": "road_hazard",
+    "severity": 0.418
+  },
+  {
+    "text": "Overcast and breezy tonight, nothing serious but take care (near Dalston)",
+    "category": "weather",
+    "severity": 0.111
+  },
+  {
+    "text": "Saw some people sitting outside but nothing threatening #LondonLife",
+    "category": "neutral",
+    "severity": 0.174
+  },
+  {
+    "text": "Phone grabbed from my hand by someone on a moped #CrimeAlert",
+    "category": "crime",
+    "severity": 0.808
+  },
+  {
+    "text": "Bit foggy tonight but mostly fine if you go slowly \u2014 feels fine",
+    "category": "weather",
+    "severity": 0.258
+  },
+  {
+    "text": "Earlier today: two men arguing and pushing each other outside the pub here (near Soho)",
+    "category": "antisocial",
+    "severity": 0.48
+  },
+  {
+    "text": "Heavy rain has made the road flood and reduced visibility a lot #TakeExtra Care",
+    "category": "weather",
+    "severity": 0.449
+  },
+  {
+    "text": "Constant harassment from people outside this area tonight",
+    "category": "antisocial",
+    "severity": 0.563
+  },
+  {
+    "text": "Gravel path in poor condition makes cycling difficult and risky #RoadSafety",
+    "category": "road_hazard",
+    "severity": 0.345
+  },
+  {
+    "text": "An hour ago: cctv cameras everywhere and well lit, feels very safe tonight (near Elephant and Castle)",
+    "category": "safe",
+    "severity": 0.054
+  },
+  {
+    "text": "Just off Brixton \u2014 men shouting aggressively at passers-by on this street",
+    "category": "antisocial",
+    "severity": 0.608
+  },
+  {
+    "text": "Youths throwing things at cars and pedestrians on this road",
+    "category": "antisocial",
+    "severity": 0.633
+  },
+  {
+    "text": "Mugging happened to my friend near this spot last week #StaySafe",
+    "category": "crime",
+    "severity": 0.891
+  },
+  {
+    "text": "Passed through without any incident, road seems fine \u2014 at midnight (near Tottenham)",
+    "category": "neutral",
+    "severity": 0.07
+  },
+  {
+    "text": "Bike theft happened in broad daylight right here #LondonCrime",
+    "category": "crime",
+    "severity": 0.548
+  },
+  {
+    "text": "Drug dealing openly happening in the alley nearby \u2014 worrying",
+    "category": "crime",
+    "severity": 0.616
+  },
+  {
+    "text": "Someone followed me down this road for several minutes, very scary",
+    "category": "antisocial",
+    "severity": 0.671
+  },
+  {
+    "text": "Windy evening making the walk less pleasant but manageable #LondonWeather",
+    "category": "weather",
+    "severity": 0.17
+  },
+  {
+    "text": "Council has improved the lighting here recently, much safer now",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Busy high street with lots of shops open late, very safe vibe \u2014 around 2am",
+    "category": "safe",
+    "severity": 0.044
+  },
+  {
+    "text": "Loose paving slabs that wobble and could cause a fall \u2014 all good",
+    "category": "road_hazard",
+    "severity": 0.193
+  },
+  {
+    "text": "It is pretty empty here tonight but I felt okay walking through, happened tonight (near Kings Cross)",
+    "category": "neutral",
+    "severity": 0.159
+  },
+  {
+    "text": "Loitering group near the ATM made me uncomfortable, happened an hour ago",
+    "category": "antisocial",
+    "severity": 0.387
+  },
+  {
+    "text": "Single street lamp flickering, walking feels less safe \u2014 this morning",
+    "category": "road_hazard",
+    "severity": 0.226
+  },
+  {
+    "text": "People clearly on drugs behaving erratically near here #StaySafe",
+    "category": "antisocial",
+    "severity": 0.473
+  },
+  {
+    "text": "Around Barking \u2014 just passed through, fairly empty but seemed fine",
+    "category": "neutral",
+    "severity": 0.143
+  },
+  {
+    "text": "Debris on the road from last night's works, watch your step, happened tonight",
+    "category": "road_hazard",
+    "severity": 0.201
+  },
+  {
+    "text": "Someone got knifed outside the shop here tonight \u2014 around 2am",
+    "category": "crime",
+    "severity": 0.978
+  },
+  {
+    "text": "Tonight: someone got stabbed outside the shop here tonight",
+    "category": "crime",
+    "severity": 0.911
+  },
+  {
+    "text": "Puddles everywhere from earlier rain, pavements are wet (near Elephant and Castle)",
+    "category": "weather",
+    "severity": 0.146
+  },
+  {
+    "text": "Water main burst making the road impassable and slippery #WatchYourStep",
+    "category": "road_hazard",
+    "severity": 0.392
+  },
+  {
+    "text": "Debris on the road from last night's works, watch your step \u2014 no worries",
+    "category": "road_hazard",
+    "severity": 0.246
+  },
+  {
+    "text": "A bit quieter than usual but nothing unusual or alarming, happened a few minutes ago (near Hackney)",
+    "category": "neutral",
+    "severity": 0.189
+  },
+  {
+    "text": "Someone got knifed outside the shop here tonight (near Stratford)",
+    "category": "crime",
+    "severity": 0.998
+  },
+  {
+    "text": "Several street lights broken making the path very dark (near Camden)",
+    "category": "road_hazard",
+    "severity": 0.411
+  },
+  {
+    "text": "Families and dog walkers everywhere, completely safe atmosphere #SafeStreets",
+    "category": "safe",
+    "severity": 0.014
+  },
+  {
+    "text": "Road surface is really broken and dangerous here \u2014 tonight",
+    "category": "road_hazard",
+    "severity": 0.331
+  },
+  {
+    "text": "CCTV cameras everywhere and well lit, feels very comfortable tonight",
+    "category": "safe",
+    "severity": 0.056
+  },
+  {
+    "text": "Always feel safe walking this route, lots of CCTV and foot traffic \u2014 all good",
+    "category": "safe",
+    "severity": 0.034
+  },
+  {
+    "text": "Loads of pubs and restaurants with people outside, very lively and safe \u2014 all good",
+    "category": "safe",
+    "severity": 0.173
+  },
+  {
+    "text": "CCTV cameras everywhere and well lit, feels very safe tonight (near Walthamstow)",
+    "category": "safe",
+    "severity": 0.121
+  },
+  {
+    "text": "Just got held up, they stole my phone and wallet",
+    "category": "crime",
+    "severity": 0.801
+  },
+  {
+    "text": "Wind so strong umbrellas are useless and vision is affected (near Tottenham)",
+    "category": "weather",
+    "severity": 0.377
+  },
+  {
+    "text": "Huge broken tarmac in the middle of the road that came out of nowhere",
+    "category": "road_hazard",
+    "severity": 0.397
+  },
+  {
+    "text": "By Canary Wharf station \u2014 overgrown bushes blocking the path and reducing visibility here",
+    "category": "road_hazard",
+    "severity": 0.208
+  },
+  {
+    "text": "Felt intimidated walking past a large group on the corner (take care)",
+    "category": "antisocial",
+    "severity": 0.562
+  },
+  {
+    "text": "Someone got stabbed outside the shop here tonight",
+    "category": "crime",
+    "severity": 0.912
+  },
+  {
+    "text": "Police tape blocking the road ahead, incident overnight",
+    "category": "crime",
+    "severity": 0.757
+  },
+  {
+    "text": "Walking through now, seems pretty quiet tonight, nothing to report \u2014 feels fine",
+    "category": "neutral",
+    "severity": 0.104
+  },
+  {
+    "text": "Had my bag snatched while walking here, avoid this route",
+    "category": "crime",
+    "severity": 0.845
+  },
+  {
+    "text": "Sketchy group of people hanging around the underpass #BeCareful",
+    "category": "antisocial",
+    "severity": 0.453
+  },
+  {
+    "text": "Police stationed near here tonight, area is very well covered #SafeStreets",
+    "category": "safe",
+    "severity": 0.02
+  },
+  {
+    "text": "Heard loud fight nearby, sounds like someone got hurt #BeCareful",
+    "category": "crime",
+    "severity": 0.745
+  },
+  {
+    "text": "Puddles everywhere from earlier rain, pavements are wet \u2014 just now",
+    "category": "weather",
+    "severity": 0.212
+  },
+  {
+    "text": "Just witnessed a stabbing on this street, police are on the way #LondonCrime",
+    "category": "crime",
+    "severity": 0.982
+  },
+  {
+    "text": "Earlier today: it is pretty empty here tonight but i felt okay walking through",
+    "category": "neutral",
+    "severity": 0.216
+  },
+  {
+    "text": "In Woolwich \u2014 got held up at knifepoint walking through here tonight",
+    "category": "crime",
+    "severity": 0.86
+  },
+  {
+    "text": "Well maintained area with good lighting, felt very comfortable",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Phone grabbed from my hand by someone on a moped (near New Cross)",
+    "category": "crime",
+    "severity": 0.82
+  },
+  {
+    "text": "Saw a man get jumped by a gang and beaten up \u2014 extremely dangerous",
+    "category": "crime",
+    "severity": 0.887
+  },
+  {
+    "text": "Gravel path in poor condition makes cycling difficult and risky, happened this morning",
+    "category": "road_hazard",
+    "severity": 0.234
+  },
+  {
+    "text": "Just got mugged, they stole my phone and wallet",
+    "category": "crime",
+    "severity": 0.837
+  },
+  {
+    "text": "Not a lot going on here, uneventful walk through, happened a few minutes ago",
+    "category": "neutral",
+    "severity": 0.12
+  },
+  {
+    "text": "In Elephant and Castle \u2014 earlier today: cobblestones in poor condition, slippery and uneven underfoot",
+    "category": "road_hazard",
+    "severity": 0.231
+  },
+  {
+    "text": "Someone followed me down this road for several minutes, very scary #StaySafe",
+    "category": "antisocial",
+    "severity": 0.657
+  },
+  {
+    "text": "Not a lot going on here, uneventful walk through \u2014 no worries",
+    "category": "neutral",
+    "severity": 0.197
+  },
+  {
+    "text": "Water main burst making the road impassable and icy",
+    "category": "road_hazard",
+    "severity": 0.375
+  },
+  {
+    "text": "Looks normal here, nothing unusual happening that I can see #LondonLife",
+    "category": "neutral",
+    "severity": 0.109
+  },
+  {
+    "text": "Someone just threatened me with a bottle, get out of here \u2014 an hour ago",
+    "category": "crime",
+    "severity": 0.85
+  },
+  {
+    "text": "Large group of men blocking the pavement and being aggressive #StaySafe",
+    "category": "antisocial",
+    "severity": 0.611
+  },
+  {
+    "text": "Walking through Lewisham \u2014 heavy rain has made the road flood and reduced visibility a lot \u2014 a few minutes ago",
+    "category": "weather",
+    "severity": 0.472
+  },
+  {
+    "text": "Walking through Croydon \u2014 passed through without any incident, road seems fine",
+    "category": "neutral",
+    "severity": 0.093
+  },
+  {
+    "text": "Bit dark around here but nothing sketchy going on #LondonLife",
+    "category": "neutral",
+    "severity": 0.165
+  },
+  {
+    "text": "Large group of men blocking the pavement and being aggressive \u2014 quite dangerous",
+    "category": "antisocial",
+    "severity": 0.68
+  },
+  {
+    "text": "Huge pothole in the middle of the road that came out of nowhere #LondonRoads",
+    "category": "road_hazard",
+    "severity": 0.401
+  },
+  {
+    "text": "Several street lights broken making the path very dark (be aware)",
+    "category": "road_hazard",
+    "severity": 0.41
+  },
+  {
+    "text": "This morning: quiet evening, saw a few people walking their dogs, nothing concerning (near Hoxton)",
+    "category": "neutral",
+    "severity": 0.134
+  },
+  {
+    "text": "Walked here late and felt perfectly safe, good lighting and people around",
+    "category": "safe",
+    "severity": 0.016
+  },
+  {
+    "text": "Just passed through, fairly empty but seemed fine \u2014 last night",
+    "category": "neutral",
+    "severity": 0.091
+  },
+  {
+    "text": "Several street lights broken making the path very dark \u2014 a few minutes ago",
+    "category": "road_hazard",
+    "severity": 0.384
+  },
+  {
+    "text": "On Dalston road \u2014 it is pretty empty here tonight but i felt okay walking through",
+    "category": "neutral",
+    "severity": 0.198
+  },
+  {
+    "text": "Constant harassment from people outside this area tonight #StaySafe",
+    "category": "antisocial",
+    "severity": 0.54
+  },
+  {
+    "text": "Strong gusts knocking people over near the open stretch",
+    "category": "weather",
+    "severity": 0.43
+  },
+  {
+    "text": "Used this route regularly at night, always fine and well lit #AllGood",
+    "category": "safe",
+    "severity": 0.038
+  },
+  {
+    "text": "Families and dog walkers everywhere, completely no issues atmosphere",
+    "category": "safe",
+    "severity": 0.0
+  },
+  {
+    "text": "Water main burst making the road impassable and slippery (take care)",
+    "category": "road_hazard",
+    "severity": 0.414
+  },
+  {
+    "text": "Just off Peckham \u2014 loose paving slabs that wobble and could cause a fall",
+    "category": "road_hazard",
+    "severity": 0.26
+  },
+  {
+    "text": "Youths throwing things at cars and pedestrians on this road #LondonStreets",
+    "category": "antisocial",
+    "severity": 0.742
+  },
+  {
+    "text": "Lots of people around, great atmosphere, felt very comfortable here (near Woolwich)",
+    "category": "safe",
+    "severity": 0.08
+  },
+  {
+    "text": "Rain has washed debris onto the road making it dangerous (near Shoreditch)",
+    "category": "weather",
+    "severity": 0.354
+  },
+  {
+    "text": "Sketchy group of people hanging around the underpass (be aware)",
+    "category": "antisocial",
+    "severity": 0.431
+  },
+  {
+    "text": "Heavy snow and ice making every step dangerous tonight (stay alert)",
+    "category": "weather",
+    "severity": 0.461
+  },
+  {
+    "text": "Men shouting aggressively at passers-by on this street #BeCareful",
+    "category": "antisocial",
+    "severity": 0.582
+  }
+]
