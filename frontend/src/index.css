@@ -69,3 +69,20 @@ html, body, #root {
 .fade-up {
   animation: fade-up 0.4s ease forwards;
 }
+
+/* Dark tooltip for map markers */
+.leaflet-tooltip-dark {
+  background: rgba(10,14,26,0.92) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  color: #e5e7eb !important;
+  font-size: 12px !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  border-radius: 8px !important;
+  padding: 6px 10px !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+.leaflet-tooltip-dark::before {
+  display: none !important;
+}

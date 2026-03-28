@@ -1,12 +1,7 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, useMapEvents, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import RouteLayer from './RouteLayer'
-
-// leaflet.heat is a legacy UMD plugin that patches a global L.
-// We must expose our L as window.L BEFORE the static import below runs its factory.
-window.L = L
-import 'leaflet.heat'
 
 const RISK_COLORS = {
   Low: '#10b981',
@@ -29,50 +24,8 @@ function createPinIcon(color) {
   })
 }
 
-function HeatmapLayer({ points }) {
-  const map = useMap()
-  const layerRef = useRef(null)
-
-  useEffect(() => {
-    // Clean up old layer whenever points change
-    if (layerRef.current) {
-      map.removeLayer(layerRef.current)
-      layerRef.current = null
-    }
-    if (!points || points.length === 0) return
-    if (!L.heatLayer) {
-      console.warn('leaflet.heat not loaded yet')
-      return
-    }
-    layerRef.current = L.heatLayer(points, {
-      radius: 28,
-      blur: 18,
-      maxZoom: 18,
-      // max > 1 so background grid-point accumulation never saturates —
-      // only true hotspot clusters (many high-weight points overlapping) hit peak colour
-      max: 3.0,
-      minOpacity: 0.0,
-      gradient: {
-        0.00: 'rgba(0,0,0,0)',            // transparent — safe zones invisible
-        0.25: 'rgba(0,0,0,0)',            // extended transparent tail
-        0.35: 'rgba(37,99,235,0.55)',     // blue edge of risk
-        0.52: 'rgba(124,58,237,0.82)',    // purple — moderate risk
-        0.68: 'rgba(220,38,38,0.92)',     // red — high risk
-        0.84: 'rgba(249,115,22,1.0)',     // orange
-        1.00: 'rgba(251,191,36,1.0)',     // amber peak — hotspot centre
-      },
-    }).addTo(map)
-
-    return () => {
-      if (layerRef.current) {
-        map.removeLayer(layerRef.current)
-        layerRef.current = null
-      }
-    }
-  }, [points, map])
-
-  return null
-}
+const TILE_DARK  = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+const TILE_LIGHT = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
 
 function MarkerLayer({ position, riskLevel }) {
   const map = useMap()
@@ -115,7 +68,7 @@ function FlyTo({ target }) {
   return null
 }
 
-export default function MapView({ heatmapPoints, markerPos, riskLevel, onMapClick, flyTarget, routeData }) {
+export default function MapView({ markerPos, riskLevel, onMapClick, flyTarget, routeData, nightMode }) {
   return (
     <MapContainer
       center={[51.505, -0.09]}
@@ -125,10 +78,9 @@ export default function MapView({ heatmapPoints, markerPos, riskLevel, onMapClic
       attributionControl={false}
     >
       <TileLayer
-        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+        url={nightMode ? TILE_DARK : TILE_LIGHT}
         maxZoom={19}
       />
-      <HeatmapLayer points={heatmapPoints} />
       {!routeData && <MarkerLayer position={markerPos} riskLevel={riskLevel} />}
       <RouteLayer routeData={routeData} />
       <ClickHandler onMapClick={onMapClick} />

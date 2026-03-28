@@ -1,11 +1,13 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import Response
 from pydantic import BaseModel
 import asyncio
 import math
 import random
 import json
+import io
 import urllib.request
 from datetime import datetime, timezone, timedelta
 
@@ -51,25 +53,92 @@ app.add_middleware(
 # London hotspots / safe zones (base model, enriched by real data below)
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Seeded crime hotspots  (lat, lng, intensity 0-1)
+# Based on real MPS crime data patterns — higher intensity = more dangerous
+# ---------------------------------------------------------------------------
 HOTSPOTS = [
-    (51.4613, -0.1156, 0.95),  # Brixton
-    (51.5431, -0.0559, 0.90),  # Hackney
-    (51.4958, -0.1002, 0.85),  # Elephant & Castle
-    (51.5308, -0.1238, 0.80),  # Kings Cross
-    (51.4740, -0.0551, 0.88),  # Peckham
-    (51.5200, -0.0800, 0.75),  # Bethnal Green
-    (51.5074, -0.0680, 0.78),  # Whitechapel
-    (51.4893, -0.1774, 0.70),  # Shepherd's Bush
-    (51.5588, -0.0744, 0.72),  # Tottenham
-    (51.4816, -0.0072, 0.82),  # New Cross
+    # ── Tier 1 — Critical risk ──────────────────────────────────────────────
+    (51.4613, -0.1156, 0.96),  # Brixton
+    (51.4740, -0.0551, 0.94),  # Peckham
+    (51.5431, -0.0559, 0.92),  # Hackney / Dalston
+    (51.4958, -0.1002, 0.90),  # Elephant & Castle
+    (51.5074, -0.0680, 0.88),  # Whitechapel
+    (51.5588, -0.0744, 0.87),  # Tottenham
+    (51.4816, -0.0072, 0.86),  # New Cross / Deptford
+
+    # ── Tier 2 — High risk ──────────────────────────────────────────────────
+    (51.5308, -0.1238, 0.82),  # Kings Cross / St Pancras
+    (51.5200, -0.0800, 0.80),  # Bethnal Green
+    (51.5233, -0.0777, 0.78),  # Shoreditch
+    (51.5459, -0.0751, 0.77),  # Dalston Junction
+    (51.4721, -0.1222, 0.76),  # Stockwell
+    (51.5295, -0.0809, 0.75),  # Hoxton
+    (51.5080, -0.0879, 0.74),  # London Bridge / Borough
+    (51.4892,  0.0648, 0.73),  # Woolwich
+    (51.5036, -0.1138, 0.72),  # Waterloo
+    (51.5396,  0.0798, 0.71),  # Barking
+    (51.3762, -0.0982, 0.70),  # Croydon
+
+    # ── Tier 3 — Moderate-high risk ─────────────────────────────────────────
+    (51.4893, -0.1774, 0.68),  # Shepherd's Bush
+    (51.5362, -0.1033, 0.66),  # Islington / Angel
+    (51.5390, -0.1426, 0.65),  # Camden Town
+    (51.5416, -0.0014, 0.64),  # Stratford
+    (51.5130, -0.1340, 0.63),  # Soho / Oxford St
+    (51.4769,  0.0012, 0.62),  # Greenwich
+    (51.5590,  0.0680, 0.61),  # Ilford
+    (51.5880, -0.0197, 0.60),  # Walthamstow
+    (51.4613, -0.0133, 0.59),  # Lewisham
+    (51.5054, -0.0235, 0.58),  # Canary Wharf / Poplar
+    (51.5134, -0.0886, 0.57),  # Bank / Monument
+    (51.4958, -0.1774, 0.55),  # Hammersmith
+    (51.5054, -0.1132, 0.54),  # South Bank / Lambeth North
 ]
 
+# ---------------------------------------------------------------------------
+# Seeded safe zones  (lat, lng, pull-down intensity)
+# Areas with consistently lower crime — suppresses danger scores nearby
+# ---------------------------------------------------------------------------
 SAFE_ZONES = [
-    (51.5000, -0.1950, 0.05),  # Kensington
-    (51.4613, -0.3037, 0.08),  # Richmond
-    (51.4241, -0.2054, 0.06),  # Wimbledon
-    (51.5565, -0.1783, 0.07),  # Hampstead
-    (51.4862, -0.2408, 0.09),  # Barnes
+    # ── Outer west / south-west — traditionally very low crime ───────────────
+    (51.5000, -0.1950, 0.10),  # Kensington / Holland Park
+    (51.4613, -0.3037, 0.11),  # Richmond
+    (51.4241, -0.2054, 0.10),  # Wimbledon
+    (51.4862, -0.2408, 0.09),  # Barnes / Mortlake
+    (51.5074, -0.2900, 0.10),  # Ealing
+    (51.4527, -0.3017, 0.10),  # Kingston upon Thames
+    (51.4480, -0.3360, 0.09),  # Twickenham
+    (51.4755, -0.2610, 0.09),  # Richmond Park
+    (51.5136, -0.2162, 0.09),  # Chiswick
+    (51.4161, -0.1865, 0.09),  # Sutton
+    (51.4000, -0.1360, 0.08),  # Croydon south / Purley
+    (51.4300, -0.2450, 0.08),  # New Malden / Worcester Park
+    (51.4000, -0.2850, 0.09),  # Epsom border / Cheam
+
+    # ── North London suburbs ─────────────────────────────────────────────────
+    (51.5565, -0.1783, 0.10),  # Hampstead / Golders Green
+    (51.6252, -0.1517, 0.09),  # Barnet
+    (51.5981, -0.3077, 0.09),  # Harrow
+    (51.6538, -0.1798, 0.08),  # Mill Hill / Edgware
+    (51.5712, -0.2731, 0.08),  # Wembley / Sudbury
+    (51.6050, -0.0780, 0.08),  # Enfield / Southgate
+    (51.5800, -0.2200, 0.08),  # Stanmore / Queensbury
+    (51.6500, -0.2400, 0.08),  # Edgware / Canons Park
+
+    # ── East / south-east suburbs ────────────────────────────────────────────
+    (51.4400,  0.0800, 0.08),  # Bromley
+    (51.3700,  0.0600, 0.08),  # Orpington
+    (51.4650,  0.1150, 0.08),  # Sidcup / Bexley
+    (51.5200,  0.1600, 0.07),  # Romford / Havering border
+    (51.5600,  0.1800, 0.07),  # Upminster area
+
+    # ── Inner pockets that feel safer ────────────────────────────────────────
+    (51.5150, -0.1420, 0.07),  # Fitzrovia / Marylebone
+    (51.5050, -0.1750, 0.07),  # South Kensington
+    (51.4950, -0.1750, 0.08),  # Fulham
+    (51.4820, -0.1940, 0.07),  # Putney
+    (51.5500, -0.1000, 0.07),  # Highbury / Canonbury
 ]
 
 
@@ -82,21 +151,52 @@ def haversine(lat1, lon1, lat2, lon2):
     return R * 2 * math.asin(math.sqrt(a))
 
 
+def _octave_noise(lat: float, lng: float) -> float:
+    """
+    Multi-octave deterministic noise that produces realistic street-level variation.
+    Three octaves at different spatial scales — coarse neighbourhood, block, street:
+      octave 1 ~2 km   amplitude 0.13  — neighbourhood character
+      octave 2 ~400 m  amplitude 0.09  — block-by-block variation
+      octave 3 ~100 m  amplitude 0.05  — individual street variation
+    Values are in [-0.27, +0.27].
+    """
+    s = math.sin
+    c = math.cos
+    return (
+        s(lat * 312.7) * c(lng * 198.3) * 0.13 +
+        s(lat * 1573.1) * c(lng * 991.7) * 0.09 +
+        s(lat * 6271.3) * c(lng * 3947.9) * 0.05 +
+        # Cross terms for less grid-aligned patterns
+        s(lat * 445.1 + lng * 312.9) * 0.04 +
+        s(lat * 1821.7 - lng * 1134.3) * 0.03
+    )
+
+
 def get_area_danger(lat: float, lng: float) -> float:
-    danger = 0.0
-    total_weight = 0.0
-    for hlat, hlng, intensity in HOTSPOTS:
-        dist = haversine(lat, lng, hlat, hlng)
-        weight = intensity * math.exp(-dist * 1.5)
-        danger += weight
-        total_weight += math.exp(-dist * 1.5)
-    safe_pull = 0.0
-    for slat, slng, intensity in SAFE_ZONES:
-        dist = haversine(lat, lng, slat, slng)
-        safe_pull += intensity * math.exp(-dist * 2.0)
-    raw = (danger - safe_pull * 0.5) / max(total_weight, 0.1)
-    noise = (math.sin(lat * 317.3) * math.cos(lng * 211.7)) * 0.08
-    return max(0.02, min(0.98, raw + noise + 0.25))
+    """
+    Returns danger in [0.0, 1.0].
+
+    Gaussian hotspot influence + safe-zone suppression + multi-octave noise.
+    The noise component creates meaningful score differences between streets
+    that are only 100-200 m apart, avoiding the uniform-blob problem.
+
+    Baseline (no nearby hotspot): ~0.15 → score ~72 (Low/Medium boundary).
+    """
+    SIGMA2_H = 2 * 1.2 ** 2   # σ=1.2 km — tighter hotspot radius
+    SIGMA2_S = 2 * 2.0 ** 2   # σ=2.0 km — broader safe suppression
+
+    danger = sum(
+        intensity * math.exp(-(haversine(lat, lng, hlat, hlng) ** 2) / SIGMA2_H)
+        for hlat, hlng, intensity in HOTSPOTS
+    )
+    safe_pull = sum(
+        intensity * math.exp(-(haversine(lat, lng, slat, slng) ** 2) / SIGMA2_S)
+        for slat, slng, intensity in SAFE_ZONES
+    )
+
+    BASE = 0.15
+    raw = BASE + danger * 0.75 - safe_pull * 0.8 + _octave_noise(lat, lng)
+    return max(0.02, min(0.98, raw))
 
 
 def get_time_modifier(hour: int) -> float:
@@ -506,6 +606,7 @@ def _generate_mock_posts(lat: float, lng: float, hour: int) -> list[dict]:
 
 @app.post("/api/posts")
 def create_post(body: PostCreate):
+    print("")
     username = body.username.strip() or "anonymous"
     content  = body.content.strip()
 
@@ -528,7 +629,8 @@ def create_post(body: PostCreate):
     except Exception:
         sentiment, impact = analyze_user_sentiment(content)
         tags = extract_semantic_tags(content, sentiment)
-
+    print("woof")
+    print(impact)
     pid = _db_save_post(body.lat, body.lng, username, content, sentiment, impact, tags)
     return {
         "id": f"user_{pid}", "username": username, "content": content,
@@ -554,61 +656,203 @@ def get_posts(lat: float, lng: float, hour: int = -1):
     }
 
 
-def _heatmap_weight(lat, lng):
-    """
-    Gaussian kernel density for heatmap visualisation.
-    Each hotspot contributes exp(-d² / 2σ²) so influence falls off
-    smoothly and symmetrically — proper Gaussian interpolation.
-    σ = 1.8 km  →  full influence within ~1 km, negligible beyond ~4 km.
-    """
-    SIGMA2 = 2 * 1.8 ** 2   # 2σ²
-
-    danger = sum(
-        intensity * math.exp(-(haversine(lat, lng, hlat, hlng) ** 2) / SIGMA2)
-        for hlat, hlng, intensity in HOTSPOTS
-    )
-    safe_adj = sum(
-        intensity * math.exp(-(haversine(lat, lng, slat, slng) ** 2) / (2 * 2.2 ** 2)) * 0.55
-        for slat, slng, intensity in SAFE_ZONES
-    )
-    # Tiny deterministic noise breaks up perfectly circular rings
-    noise = abs(math.sin(lat * 317.3) * math.cos(lng * 211.7)) * 0.025
-    return max(0.0, danger - safe_adj + noise)
+# ── Heatmap bounds (must match frontend ImageOverlay bounds) ──────────────────
+HEATMAP_BOUNDS = {
+    "lat_min": 51.35, "lat_max": 51.65,
+    "lng_min": -0.50, "lng_max":  0.20,
+}
 
 
-_heatmap_cache = None
 
+CMAPS = {
+    # Night palette — danger value thresholds aligned with score bands:
+    #   danger < 0.20  → score > 75 → Low      → transparent
+    #   danger 0.20-0.45 → score 55-75 → Medium  → blue
+    #   danger 0.45-0.65 → score 35-55 → High    → purple→red
+    #   danger > 0.65  → score < 35 → Critical  → orange→amber
+    "night": [
+        (0.00,   0,   0,   0,   0),
+        (0.18,   0,   0,   0,   0),   # transparent — safe baseline
+        (0.24,  14,  40, 140,  50),   # blue whisper
+        (0.35,  29,  78, 216, 150),   # blue — Medium
+        (0.48, 109,  40, 217, 195),   # purple
+        (0.58, 190,  24,  93, 215),   # magenta
+        (0.65, 220,  38,  38, 225),   # crimson — High
+        (0.76, 249, 115,  22, 238),   # orange
+        (0.87, 251, 191,  36, 248),   # amber — Critical
+        (1.00, 255, 255, 200, 255),   # white-hot peak
+    ],
+    "day": [
+        (0.00,   0,   0,   0,   0),
+        (0.18,   0,   0,   0,   0),
+        (0.24,  22, 163,  74,  60),   # green whisper
+        (0.35,  34, 197,  94, 150),   # green — Medium
+        (0.48, 132, 204,  22, 190),   # lime
+        (0.58, 234, 179,   8, 210),   # yellow
+        (0.65, 249, 115,  22, 225),   # orange — High
+        (0.76, 239,  68,  68, 238),   # red
+        (0.87, 185,  28,  28, 248),   # deep red — Critical
+        (1.00, 127,  29,  29, 255),   # dark crimson peak
+    ],
+}
+
+_heatmap_png_cache = {}   # keyed by palette name
+
+
+def _render_heatmap_png(palette: str = "night") -> bytes:
+    import numpy as np
+    from scipy.ndimage import gaussian_filter
+    from PIL import Image
+
+    # Higher resolution for a crisper look
+    W, H = 900, 600
+
+    lat_min = HEATMAP_BOUNDS["lat_min"]
+    lat_max = HEATMAP_BOUNDS["lat_max"]
+    lng_min = HEATMAP_BOUNDS["lng_min"]
+    lng_max = HEATMAP_BOUNDS["lng_max"]
+
+    # Evaluate get_area_danger on the full grid — same function as /api/safety
+    # so colours correspond exactly to scores.
+    grid = np.zeros((H, W), dtype=np.float32)
+    for row in range(H):
+        lat = lat_max - (row / H) * (lat_max - lat_min)
+        for col in range(W):
+            lng = lng_min + (col / W) * (lng_max - lng_min)
+            grid[row, col] = get_area_danger(lat, lng)
+
+    # Minimal blur — just enough to soften pixel-grid edges, not to spread blobs.
+    grid = gaussian_filter(grid, sigma=0.8)
+    grid = np.clip(grid, 0.0, 1.0)
+
+    # Build 256-entry LUT from CMAP control points
+    CMAP = CMAPS.get(palette, CMAPS["night"])
+
+    def interp_color(v):
+        for i in range(len(CMAP) - 1):
+            v0, r0, g0, b0, a0 = CMAP[i]
+            v1, r1, g1, b1, a1 = CMAP[i + 1]
+            if v0 <= v <= v1:
+                t = (v - v0) / (v1 - v0)
+                # Smooth-step easing so colour transitions feel organic
+                t = t * t * (3 - 2 * t)
+                return (
+                    int(r0 + t * (r1 - r0)),
+                    int(g0 + t * (g1 - g0)),
+                    int(b0 + t * (b1 - b0)),
+                    int(a0 + t * (a1 - a0)),
+                )
+        r, g, b, a = CMAP[-1][1], CMAP[-1][2], CMAP[-1][3], CMAP[-1][4]
+        return (r, g, b, a)
+
+    lut = [interp_color(i / 255) for i in range(256)]
+    lut_r = bytes(c[0] for c in lut)
+    lut_g = bytes(c[1] for c in lut)
+    lut_b = bytes(c[2] for c in lut)
+    lut_a = bytes(c[3] for c in lut)
+
+    idx = (grid * 255).astype(np.uint8)
+    r_ch = np.frombuffer(lut_r, dtype=np.uint8)[idx]
+    g_ch = np.frombuffer(lut_g, dtype=np.uint8)[idx]
+    b_ch = np.frombuffer(lut_b, dtype=np.uint8)[idx]
+    a_ch = np.frombuffer(lut_a, dtype=np.uint8)[idx]
+
+    rgba = np.stack([r_ch, g_ch, b_ch, a_ch], axis=-1)
+    img  = Image.fromarray(rgba, mode="RGBA")
+
+    buf = io.BytesIO()
+    img.save(buf, format="PNG", optimize=True)
+    return buf.getvalue()
+
+
+@app.get("/api/heatmap/image")
+def get_heatmap_image(palette: str = "night"):
+    if palette not in CMAPS:
+        palette = "night"
+    if palette not in _heatmap_png_cache:
+        _heatmap_png_cache[palette] = _render_heatmap_png(palette)
+    return Response(content=_heatmap_png_cache[palette], media_type="image/png",
+                    headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/api/heatmap/bounds")
+def get_heatmap_bounds():
+    return HEATMAP_BOUNDS
+
+
+# Keep old /api/heatmap returning empty so frontend doesn't break during transition
 @app.get("/api/heatmap")
 def get_heatmap():
-    global _heatmap_cache
-    if _heatmap_cache is not None:
-        return {"points": _heatmap_cache}
+    return {"points": []}
 
-    raw = []
-    lat_min, lat_max = 51.35, 51.65
-    lng_min, lng_max = -0.50, 0.20
-    lat_step = 0.007   # ~780 m rows — matches radius without excessive accumulation
-    lng_step = 0.011   # ~770 m cols
 
-    lat = lat_min
-    while lat <= lat_max:
-        lng = lng_min
-        while lng <= lng_max:
-            raw.append((round(lat, 4), round(lng, 4), _heatmap_weight(lat, lng)))
-            lng += lng_step
-        lat += lat_step
+# ---------------------------------------------------------------------------
+# Map markers — police stations & safe spaces
+# ---------------------------------------------------------------------------
 
-    # Normalise so the full gradient (blue → red → yellow) is always used
-    vals = [w for _, _, w in raw]
-    lo, hi = min(vals), max(vals)
-    span = hi - lo if hi != lo else 1.0
-    points = [
-        [lt, lg, round((w - lo) / span, 3)]
-        for lt, lg, w in raw
-    ]
+POLICE_STATIONS = [
+    {"name": "Brixton Police Station",         "lat": 51.4607, "lng": -0.1146},
+    {"name": "Hackney Police Station",         "lat": 51.5443, "lng": -0.0557},
+    {"name": "Peckham Police Station",         "lat": 51.4730, "lng": -0.0693},
+    {"name": "Elephant & Castle Police",       "lat": 51.4953, "lng": -0.1007},
+    {"name": "Kings Cross Police Station",     "lat": 51.5302, "lng": -0.1208},
+    {"name": "Tottenham Police Station",       "lat": 51.5881, "lng": -0.0707},
+    {"name": "Lewisham Police Station",        "lat": 51.4615, "lng": -0.0127},
+    {"name": "Bethnal Green Police Station",   "lat": 51.5261, "lng": -0.0613},
+    {"name": "Islington Police Station",       "lat": 51.5356, "lng": -0.1050},
+    {"name": "Camden Police Station",          "lat": 51.5401, "lng": -0.1437},
+    {"name": "Hammersmith Police Station",     "lat": 51.4927, "lng": -0.2247},
+    {"name": "Wandsworth Police Station",      "lat": 51.4554, "lng": -0.1916},
+    {"name": "Southwark Police Station",       "lat": 51.5027, "lng": -0.0830},
+    {"name": "Tower Hamlets Police Station",   "lat": 51.5143, "lng": -0.0407},
+    {"name": "Croydon Police Station",         "lat": 51.3741, "lng": -0.1013},
+    {"name": "Stratford Police Station",       "lat": 51.5420, "lng": -0.0042},
+    {"name": "Woolwich Police Station",        "lat": 51.4906, "lng":  0.0683},
+    {"name": "Barking Police Station",         "lat": 51.5390, "lng":  0.0786},
+    {"name": "Walthamstow Police Station",     "lat": 51.5863, "lng": -0.0178},
+    {"name": "Haringey Police Station",        "lat": 51.5969, "lng": -0.1099},
+    {"name": "Shepherd's Bush Police Station", "lat": 51.5036, "lng": -0.2192},
+    {"name": "Ilford Police Station",          "lat": 51.5587, "lng":  0.0711},
+    {"name": "New Cross Police Station",       "lat": 51.4777, "lng": -0.0393},
+    {"name": "Harlesden Police Station",       "lat": 51.5355, "lng": -0.2476},
+]
 
-    _heatmap_cache = points
-    return {"points": points}
+SAFE_SPACES = [
+    # Hospitals
+    {"name": "King's College Hospital",        "lat": 51.4680, "lng": -0.0932, "type": "hospital"},
+    {"name": "St Thomas' Hospital",            "lat": 51.4988, "lng": -0.1188, "type": "hospital"},
+    {"name": "Royal London Hospital",          "lat": 51.5186, "lng": -0.0596, "type": "hospital"},
+    {"name": "University College Hospital",    "lat": 51.5246, "lng": -0.1340, "type": "hospital"},
+    {"name": "Homerton Hospital",              "lat": 51.5497, "lng": -0.0444, "type": "hospital"},
+    {"name": "Lewisham Hospital",              "lat": 51.4619, "lng": -0.0175, "type": "hospital"},
+    {"name": "St George's Hospital",           "lat": 51.4272, "lng": -0.1748, "type": "hospital"},
+    {"name": "Croydon University Hospital",    "lat": 51.3869, "lng": -0.1094, "type": "hospital"},
+    # 24h tube/overground stations (busy, CCTV, staff)
+    {"name": "Liverpool Street Station",       "lat": 51.5178, "lng": -0.0823, "type": "transport_hub"},
+    {"name": "London Bridge Station",          "lat": 51.5051, "lng": -0.0864, "type": "transport_hub"},
+    {"name": "Victoria Station",               "lat": 51.4952, "lng": -0.1441, "type": "transport_hub"},
+    {"name": "Paddington Station",             "lat": 51.5154, "lng": -0.1755, "type": "transport_hub"},
+    {"name": "Waterloo Station",               "lat": 51.5031, "lng": -0.1132, "type": "transport_hub"},
+    {"name": "Canary Wharf Station",           "lat": 51.5051, "lng": -0.0209, "type": "transport_hub"},
+    {"name": "Stratford Station",              "lat": 51.5415, "lng": -0.0042, "type": "transport_hub"},
+    # Community safe spaces
+    {"name": "Brixton Recreation Centre",      "lat": 51.4625, "lng": -0.1143, "type": "community"},
+    {"name": "Hackney Community Centre",       "lat": 51.5451, "lng": -0.0559, "type": "community"},
+    {"name": "Peckham Library",                "lat": 51.4738, "lng": -0.0692, "type": "community"},
+    {"name": "Camden Centre",                  "lat": 51.5366, "lng": -0.1243, "type": "community"},
+    {"name": "Southwark Council Offices",      "lat": 51.5029, "lng": -0.0905, "type": "community"},
+    {"name": "Lewisham Gateway",               "lat": 51.4640, "lng": -0.0140, "type": "community"},
+    {"name": "Stratford Library",              "lat": 51.5413, "lng": -0.0035, "type": "community"},
+    {"name": "Croydon Central Library",        "lat": 51.3754, "lng": -0.0971, "type": "community"},
+]
+
+
+@app.get("/api/markers")
+def get_markers():
+    return {
+        "police": POLICE_STATIONS,
+        "safe_spaces": SAFE_SPACES,
+    }
 
 
 # ---------------------------------------------------------------------------

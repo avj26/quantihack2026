@@ -2,6 +2,9 @@ fastapi
 uvicorn[standard]
 sqlalchemy
 httpx
+numpy
+scipy
+Pillow
 
 # ML classifiers (install separately if not needed)
 torch

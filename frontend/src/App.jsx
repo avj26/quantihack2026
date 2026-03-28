@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { Navigation2, Info, MapPin, Route } from 'lucide-react'
+import { useState, useCallback } from 'react'
+import { Navigation2, Info, MapPin, Route, Sun, Moon } from 'lucide-react'
 import MapView from './components/MapView'
 import MetricsPanel from './components/MetricsPanel'
 import SearchBar from './components/SearchBar'
@@ -8,7 +8,6 @@ import RoutingPanel from './components/RoutingPanel'
 import axios from 'axios'
 
 export default function App() {
-  const [heatmapPoints, setHeatmapPoints] = useState([])
   const [selectedPos, setSelectedPos] = useState(null)
   const [address, setAddress] = useState('')
   const [safetyData, setSafetyData] = useState(null)
@@ -21,13 +20,7 @@ export default function App() {
   // Routing mode
   const [appMode, setAppMode] = useState('explore') // 'explore' | 'route'
   const [routeData, setRouteData] = useState(null)
-
-  // Fetch heatmap on mount
-  useEffect(() => {
-    axios.get('/api/heatmap')
-      .then(res => setHeatmapPoints(res.data.points))
-      .catch(console.error)
-  }, [])
+  const [nightMode, setNightMode] = useState(true)
 
   const fetchSafety = useCallback(async (lat, lng, h = hour) => {
     setLoading(true)
@@ -140,12 +133,12 @@ export default function App() {
     <div className="relative w-full h-full bg-[#0a0e1a]">
       {/* Map */}
       <MapView
-        heatmapPoints={heatmapPoints}
         markerPos={selectedPos}
         riskLevel={riskLevel}
         onMapClick={handleMapClick}
         flyTarget={flyTarget}
         routeData={routeData}
+        nightMode={nightMode}
       />
 
       {/* Logo / Top bar */}
@@ -234,21 +227,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Legend — only in explore mode */}
-        {appMode === 'explore' && (
-          <div
-            className="rounded-xl px-4 py-3 flex-shrink-0"
-            style={{ background: 'rgba(10,14,26,0.85)', border: '1px solid rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)' }}
-          >
-            <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">Heatmap Legend</div>
-            <div className="flex-1 h-2 rounded-full" style={{ background: 'linear-gradient(to right, #1d4ed8, #7c3aed, #dc2626, #ea580c, #fbbf24)' }} />
-            <div className="flex justify-between text-xs text-gray-600 mt-1">
-              <span>Safer</span>
-              <span>Higher Risk</span>
-            </div>
-          </div>
-        )}
-
         {/* Route legend */}
         {appMode === 'route' && routeData && (
           <div
@@ -266,6 +244,24 @@ export default function App() {
             </div>
           </div>
         )}
+      </div>
+
+      {/* Map toggles — bottom right */}
+      <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2 pointer-events-auto">
+        <button
+          onClick={() => setNightMode(v => !v)}
+          title={nightMode ? 'Switch to day map' : 'Switch to night map'}
+          className="flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold transition-all"
+          style={{
+            background: nightMode ? 'rgba(99,102,241,0.18)' : 'rgba(255,255,255,0.06)',
+            border: `1px solid ${nightMode ? 'rgba(99,102,241,0.4)' : 'rgba(255,255,255,0.10)'}`,
+            color: nightMode ? '#818cf8' : '#6b7280',
+            backdropFilter: 'blur(12px)',
+          }}
+        >
+          {nightMode ? <Moon size={13} /> : <Sun size={13} />}
+          <span>{nightMode ? 'Night' : 'Day'}</span>
+        </button>
       </div>
 
       {/* Right metrics panel */}
